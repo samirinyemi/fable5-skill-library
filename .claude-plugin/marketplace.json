@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-marketplace.json",
+  "name": "fable5-skill-library",
+  "version": "1.0.0",
+  "description": "Fable 5 Skill Library — 27 design skills that bring Fable-grade design to any model.",
+  "owner": {
+    "name": "Samuel Irinyemi",
+    "email": "samirinyemi@gmail.com"
+  },
+  "plugins": [
+    {
+      "name": "fable-skills",
+      "description": "Twenty-seven design skills — DNA, web, mobile, brand, motion, editorial, typography, product, and more — invocable from Opus, Sonnet, Haiku, or any model.",
+      "source": ".",
+      "category": "design"
+    }
+  ]
+}

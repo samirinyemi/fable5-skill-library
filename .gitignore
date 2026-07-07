@@ -1,0 +1,6 @@
+# macOS
+.DS_Store
+
+# OS cruft
+*.swp
+Thumbs.db

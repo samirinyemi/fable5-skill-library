@@ -1,0 +1,12 @@
+{
+  "name": "fable-skills",
+  "description": "Twenty-seven skills that encode how Fable 5 designs — its decision rules, restraint, and critique loop. Invoke Fable-grade design from Opus, Sonnet, Haiku, or any model.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Samuel Irinyemi",
+    "email": "samirinyemi@gmail.com"
+  },
+  "homepage": "https://github.com/samirinyemi/fable5-skill-library",
+  "repository": "https://github.com/samirinyemi/fable5-skill-library",
+  "keywords": ["design", "ui", "ux", "web-design", "mobile", "branding", "typography", "motion", "editorial", "product", "fable"]
+}
