@@ -1,6 +1,8 @@
 ---
 name: fable-design-dna
-description: Use when starting ANY design task — UI, web, brand, editorial, mobile — before writing a single line of code or placing a single element. This is the core operating system behind every other fable-* skill; load it first when output looks generic, "AI-made", safe, or template-like.
+description: Use when starting ANY Fable design task — before layout, color, or code — to set concept-first direction and kill generic/"AI-made"/template output; the mindset layer every other fable-* skill builds on and hands craft rules to.
+requires: [(none)]
+pairs_with: [fable-design-critique]
 ---
 
 # Fable Design DNA
@@ -15,9 +17,22 @@ Every design task runs this loop — no exceptions:
 
 1. **INTERROGATE** — Who is this for? What single feeling must it produce (trust, desire, calm, urgency)? What will make someone remember it tomorrow?
 2. **COMMIT** — Choose ONE bold aesthetic direction and write it down in a sentence ("brutalist confidence with editorial warmth"). Every later decision is tested against this sentence.
-3. **CONSTRAIN** — Before designing, fix the system: one type pairing, one spacing scale, ≤3 colors + neutrals, one corner radius language, one motion personality.
+3. **CONSTRAIN** — Before designing, fix one committed system per axis (type, color, space, radius, motion) — defer the exact values to the domain skill for that axis: type pairing → fable-typography; palette → fable-color-craft; spacing/radius system → fable-design-systems.
 4. **EXECUTE** — Build with the system. When tempted to add variety, add depth instead.
 5. **CRITIQUE** — Look at the result as a skeptical creative director. Find the weakest element. Fix it. Repeat until nothing embarrasses you.
+
+Do not declare done until you have run the Red Flags checklist below AND invoked fable-design-critique on the output. If any red flag fires, return to COMMIT.
+
+## Worked Example
+
+> **Brief:** landing page for a sleep-tracking app.
+> **INTERROGATE** → feeling = calm trust, for anxious late-night users.
+> **COMMIT** → "clinical serenity: editorial whitespace, one deep-night accent."
+> **CONSTRAIN** → type: Fraunces display + Inter body. Space: 8pt scale. Color: ink `#0B1220` dominant, warm off-white ground, single glow-teal accent. Radius: 4px. Motion: slow ease-out only.
+> **GENERIC version rejected:** purple gradient hero, 3 feature cards, everything centered.
+> **RESULT:** asymmetric hero, oversized headline, one teal moment on the CTA; features as a left-aligned editorial list, not cards.
+
+The concept sentence propagates into every axis — that is the move.
 
 ## The Anti-Generic Contract
 
@@ -52,6 +67,8 @@ Utility-dense surfaces (admin tables, settings, forms mid-flow) earn clarity ove
 This skill sets the mindset. Pair it with the domain skill for the task: fable-web-design, fable-mobile-ui, fable-editorial-design, fable-brand-identity, fable-typography, fable-color-craft, fable-motion-design, fable-design-systems, fable-product-ui, fable-award-winning-web. Finish every piece with fable-design-critique.
 
 ## Red Flags — Start Over
+
+This is a fast generative self-check, not the full rubric — fable-design-critique owns the complete evaluative rubric. If any fires, return to COMMIT; then hand the finished piece to fable-design-critique.
 
 - You picked a layout before you picked an idea
 - Your one-sentence direction could describe any product

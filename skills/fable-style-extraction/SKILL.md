@@ -1,6 +1,8 @@
 ---
 name: fable-style-extraction
-description: Use when asked to make something "in the style of" a reference — "make my site feel like this one", "use this as inspiration", "match this aesthetic" — applying a reference's look to different content, NOT cloning it 1:1 (that is fable-site-replication).
+description: Use when applying a reference's aesthetic to DIFFERENT content — "make my site feel like this one", "in the style of X", "use this as inspiration", "match this vibe" — extracting its type/color/spacing/motion rules as a token sheet. NOT a 1:1 clone (fable-site-replication); NOT finding references (fable-design-research).
+requires: [fable-design-dna]
+pairs_with: [fable-design-research, fable-site-replication, fable-design-critique]
 ---
 
 # Style Extraction
@@ -13,7 +15,7 @@ The middle ground between cloning and inventing: **steal the system, not the pix
 
 ## Phase 1 — Capture Like a Forensic, Read Like a Critic
 
-Gather evidence with replication discipline (screenshots at 3 widths, real CSS values — never estimates). But the goal differs: you're answering **"what makes this feel the way it feels?"** Write the answer as one sentence before extracting anything ("warm editorial confidence from oversized serifs, cream field, and slow reveals"). If your sentence could describe ten sites, look harder.
+Capture using fable-site-replication Phase 1 discipline (3 widths, measured CSS). The ONLY difference: you're hunting for proportions and rules, not exact coordinates — so also record color-area ratios and which elements never animate. The goal is answering **"what makes this feel the way it feels?"** Write the answer as one sentence before extracting anything ("warm editorial confidence from oversized serifs, cream field, and slow reveals"). If your sentence could describe ten sites, look harder.
 
 ## Phase 2 — Extract the System (the style sheet)
 
@@ -44,3 +46,25 @@ Logos, copy, photography/illustrations, mascots, brand names, and any element th
 - Extracting from memory of the vibe — produces generic "inspired by" work with none of the reference's discipline. Measure, then apply.
 - Blending three references without a hierarchy — pick one PRIMARY reference for the system; others may contribute single elements at most.
 - Keeping your old spacing/type habits under their palette — a palette swap is not a style transfer; the rhythm is most of the feel.
+
+## Worked Example
+
+**Reference:** an editorial studio site. One-sentence read: *"warm editorial confidence."*
+
+**Extracted sheet:**
+- **Type** — high-contrast serif display 8–12vw / 0.95 leading; grotesque body 16–18px
+- **Color** — 70% cream field (#F4EFE6), warm-neutral, accent #C6432A spent ONLY on links + one hero word
+- **Space** — 120px section padding, 1100px container, 8px gap base
+- **Motion** — 600ms ease-out reveals, nothing bounces
+
+**Applied to a SaaS pricing page:** same type logic + cream/accent proportions + reveal timing, but a 3-column pricing grid the reference never had.
+
+**Why:** kinship comes from the rules, not a borrowed section. Anyone who loves the reference feels it; side-by-side, no block is copied.
+
+## Ship Gate
+
+Before calling it done, self-check against this skill's own non-negotiables, then hand to fable-design-critique for an independent pass:
+- [ ] One-sentence feel-read written and NOT generic (fails the "could describe ten sites" test)?
+- [ ] Every extracted value measured from the reference, not recalled from memory?
+- [ ] Zero copied sections or layout blocks — resemblance carried by rules, not arrangement?
+- [ ] Identity elements (logo, copy, photography, mascots, brand names) all stripped?

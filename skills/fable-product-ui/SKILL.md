@@ -1,6 +1,8 @@
 ---
 name: fable-product-ui
-description: Use when designing product interfaces — dashboards, admin panels, SaaS apps, settings, tables, forms, data-heavy tools — or when a working UI feels cluttered, noisy, or exhausting to use daily.
+description: Use when refining the interior craft of a data-heavy product — tables, forms, settings, admin panels, dashboards — for calm, scannable, low-fatigue daily use; when a working UI feels cluttered or noisy. For picking an app's overall archetype/elevation, use fable-web-app-design first.
+requires: [fable-design-dna]
+pairs_with: [fable-web-app-design, fable-design-systems, fable-onboarding-empty-states, fable-accessibility, fable-design-critique]
 ---
 
 # Product UI
@@ -9,7 +11,13 @@ description: Use when designing product interfaces — dashboards, admin panels,
 
 Product UI is design for the thousandth use, not the first impression. Fable's method: **calm surfaces, ruthless information hierarchy, and interfaces that get out of the way of work.** Expression lives in marketing; here, restraint IS the personality.
 
-**REQUIRED BACKGROUND:** fable-design-dna. For the token layer, fable-design-systems.
+## Chain
+
+- requires: fable-design-dna (foundation), fable-design-systems (token layer)
+- pairs_with: fable-micro-interactions (the Micro-Feedback Contract belongs there in depth), fable-onboarding-empty-states (the empty/error of the five states)
+- verify_with: fable-design-critique (MANDATORY final pass before declaring done)
+
+**Boundary vs fable-web-app-design:** web-app-design picks the app ARCHETYPE and elevation direction (which kind of app, how expressive); product-ui owns the INTERIOR density/calm craft — the five states, tables, forms, working screens. Do not re-teach archetype selection here.
 
 ## Calm by Default
 
@@ -53,3 +61,22 @@ Every action gets an acknowledgment within 100ms (press state), a result within 
 - Ten equal buttons: when everything is a primary action, users do arithmetic on every click.
 - Cards around everything — card-in-card-in-card is the boxed water of layout. Whitespace groups better.
 - Designing only the "full and healthy" state; real products live in empty, partial, and error.
+
+## Worked Example
+
+A dashboard metrics row:
+
+- **BEFORE:** 6 stat cards, each a bordered box with a colored gradient header, every number in accent blue, a "View" button on each. Six equal shouts — nothing lands.
+- **AFTER:** borderless tiles separated by 32px whitespace; numbers in neutral-900 tabular figures, labels in neutral-500; one number turns red ONLY when it breaches threshold; a single row-level "View report" link, not six buttons.
+
+Why: it reads in 3 seconds and the one red number is the only thing that grabs you — calm surface, ruthless hierarchy.
+
+## Ship Gate
+
+Before calling it done, self-check against this skill's own non-negotiables, then hand to fable-design-critique for an independent pass:
+
+- [ ] Squint test: content is the loudest thing, chrome the quietest; exactly one visually-primary action per view.
+- [ ] Accent color appears ONLY on primary action, selected state, and status — never as decoration.
+- [ ] Every table/list is drawn in all five states: loading, empty (with CTA), one, many, error.
+- [ ] Separation earned by spacing/background before any border; no card-in-card nesting.
+- [ ] Ran fable-design-critique — do not declare done until it passes.

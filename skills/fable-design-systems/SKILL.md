@@ -1,6 +1,8 @@
 ---
 name: fable-design-systems
-description: Use when creating design tokens, component libraries, style guides, or theming architecture — or when a codebase/design file shows drift (five button styles, hardcoded hex values, inconsistent spacing) and needs systemization.
+description: Use when building the reusable token + component layer — design tokens, semantic theming, component-library API and states, drift audits — that other screens consume; NOT for one-off screen visuals (fable-product-ui) or the Figma-file mechanics of variables/instances (fable-figma-craft).
+requires: [fable-design-dna]
+pairs_with: [fable-figma-craft, fable-typography, fable-color-craft, fable-product-ui, fable-design-critique]
 ---
 
 # Design Systems
@@ -48,3 +50,25 @@ The semantic layer is where the brand lives; retheme = remap semantics, touch no
 - 40 grays and 12 blues in primitives "just in case" — unused tokens are decisions nobody made.
 - Components that forbid nothing: if every property is overridable, the system is a suggestion.
 - Treating the system as a museum: it exists to make the NEXT screen faster and consistent, not to be admired.
+
+## Worked Example
+
+The drift-to-system transform — five hand-tuned buttons collapse into two token layers + one component:
+
+```
+BEFORE (drift)          AFTER (system)
+#2563eb, #2f6bff,   →   primitive:  blue-600: #2563eb
+#1d4ed8 ...             semantic:   color-action: blue-600
+padding:11px 18px,  →   primitive:  space-3, space-4
+padding:12px 20px      component:  <Button intent="primary" size="md">
+```
+
+Retheme the entire product from one line — `color-action: blue-600 → violet-600` — because every button consumes the semantic token, never the hex. That single edit is the whole payoff of the two-layer model.
+
+## Ship Gate
+
+Before calling it done, self-check against this skill's own non-negotiables, then hand to fable-design-critique for an independent pass:
+- [ ] Components consume ONLY semantic tokens — grep primitives (raw hex/px) in component files returns 0 hits.
+- [ ] Retheme works by remapping semantics alone; no component file is touched.
+- [ ] Every interactive component ships all 7 states: default, hover, active, focus-visible, disabled, loading, error.
+- [ ] No token exists without 3+ real uses, and the change has a changelog entry.

@@ -1,6 +1,8 @@
 ---
 name: fable-typography
-description: Use when choosing fonts, building type scales, setting headlines or body text, pairing typefaces, or when a design's typography feels default, flat, or unreadable. Applies to web, mobile, brand, and editorial work.
+description: Use when choosing or pairing typefaces, building type scales, setting headline/body sizing, leading, tracking, or line length — or when type feels default, flat, or unreadable. Governs the type itself across web, mobile, and brand; for page-level longform pacing use fable-editorial-design.
+requires: [fable-design-dna]
+pairs_with: [fable-color-craft, fable-editorial-design, fable-brand-identity, fable-design-critique]
 ---
 
 # Typography
@@ -47,3 +49,23 @@ Space around type belongs to the type: heading margins asymmetric (more above, l
 - Six weights and five sizes on one screen — a scale exists to forbid this.
 - Display font used for paragraphs (character becomes noise) or text font blown up to 96px (blandness becomes monumental blandness).
 - Ignoring loading: self-host, `font-display: swap`, subset; a FOUT into the wrong fallback undoes the casting.
+
+## Worked Example
+
+**BEFORE** — Inter Bold 20px headline / Inter 16px body / line-height 1.4 / full-width paragraphs / straight quotes. Everything is the same voice at almost the same size: nothing was cast, nothing jumps.
+
+**AFTER**
+- Display: GT Sectra 44px, line-height 1.05, tracking -2% — a serif with character, set tight.
+- Body: Inter 17px, line-height 1.6, max-width 68ch — a text face doing text work, at a readable measure.
+- Labels: Inter Medium 12px, tracking +8%, uppercase — a third register that isn't just "smaller body".
+- Real quotes “ ”, en/em dashes, tabular numerals in the price table.
+
+Why it fires: casting contrast (serif display vs. sans text), a dramatic 17 → 44 jump, and the invisible details (leading, measure, tracking, punctuation) that turn typed text into set type.
+
+## Ship Gate
+
+Before calling it done, self-check against this skill's own non-negotiables, then hand to fable-design-critique for an independent pass:
+- [ ] Display face is NOT Inter/Roboto/Open Sans; largest heading is at least ~1.6x the next step (a real jump, not an increment).
+- [ ] Body line length lands 45–75ch under max-width; display line-height ≤1.15, body ≥1.5.
+- [ ] Real quotes/dashes (no straight quotes), tabular numerals in tables/timers.
+- [ ] ≤3 weights and ≤5 sizes on the screen; hierarchy carried by size+space, not color/bold alone.

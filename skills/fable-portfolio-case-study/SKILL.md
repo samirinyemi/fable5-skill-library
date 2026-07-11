@@ -1,6 +1,8 @@
 ---
 name: fable-portfolio-case-study
-description: Use when presenting design work — portfolio case studies, project pages, Behance/Dribbble posts, client work summaries — or when strong work reads flat because the story is a chronological activity log.
+description: Use when writing a portfolio or client case study — narrating finished design work as decisions-with-reasons and outcomes — especially when strong work reads flat because it's told as a chronological activity log. (For the page's visual layout, pair with fable-editorial-design.)
+requires: [fable-design-dna, fable-editorial-design]
+pairs_with: [fable-presentation-design, fable-design-critique, fable-ux-copywriting, fable-image-direction]
 ---
 
 # Portfolio Case Study
@@ -18,7 +20,7 @@ A case study sells judgment, not pixels: hiring managers and clients skim for **
 3. **The problem as tension** — what was broken/missing and why it mattered, in the client's stakes ("support tickets doubled"), not design vocabulary ("the UX was suboptimal").
 4. **Constraints** — budget, legacy, brand, deadline. Constraints are what make your decisions impressive; hiding them hides your skill.
 5. **2–4 key decisions** — the heart. Each: the fork you faced, what you chose, WHY, and what it cost ("we traded onboarding depth for time-to-value"). Show the rejected direction when you can — one honest dead-end buys more trust than ten polished screens.
-6. **The craft pass** — close-up crops of details that prove obsession: a type system, an empty state, motion. Editorial scale: big when it's emotional, small when it's evidence.
+6. **The craft pass** — close-up crops of details that prove obsession: a type system, an empty state, motion. (Sizing and scale of these on the page is fable-editorial-design's job — pick *which* details earn a place; let editorial decide how big they run.)
 7. **Outcomes** — numbers if you have them, with honest attribution ("signups rose 32% in the quarter after launch — the redesign was one of several changes"). No numbers? Use qualitative proof: a user quote, adoption, what the client shipped next.
 8. **Reflection** — one thing you'd do differently. Signals growth; skipping it signals defensiveness.
 
@@ -39,3 +41,21 @@ Every image earns its place as evidence for a claim. Real content in every shot,
 - All finals, no thinking — reads as a Dribbble dump; the client for judgment leaves unserved.
 - Claiming solo credit for team outcomes — one reference call destroys the portfolio.
 - Ten case studies of everything: three deep beats ten shallow. Curate like the accent color — scarcity is the signal.
+
+## Worked Example
+
+The single most important move: turn an *activity* into a *decision block* (fork + choice + reason + cost).
+
+> **BEFORE (activity log):** "I designed the onboarding as an interactive sandbox with a guided intro."
+>
+> **AFTER (decision block):** *Fork:* onboarding could be a guided 5-step tour or a single interactive sandbox. *Chose:* sandbox. *Why:* activation data showed 60% dropped before step 3 — the tour taxed the exact users we were losing. *Cost:* power-user features stayed undiscovered longer — accepted, since activation was the KPI. *Rejected screen:* [tour mockup], kept to show the path not taken.
+
+Why: the BEFORE states what exists; the AFTER proves judgment — the fork, the reason, and the trade-off are what a hiring manager is actually skimming for.
+
+## Ship Gate
+
+Before calling it done, self-check against this skill's own non-negotiables, then hand to fable-design-critique for an independent pass:
+- [ ] Cover the text — do the images alone read as a coherent 90-second skim? Cover the images — does the text alone still carry each decision and outcome?
+- [ ] Are there 2–4 real decision blocks (fork + reason + cost) — and is at least one rejected direction shown, not just finals?
+- [ ] Is every credit claim literally true on a reference call (solo vs. team verbs, honest outcome attribution)?
+- [ ] Is it structured by decision, not chronology — and does it close with one honest reflection?

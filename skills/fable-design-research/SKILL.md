@@ -1,6 +1,8 @@
 ---
 name: fable-design-research
-description: Use when hunting for design references, patterns, or inspiration — "find me examples of...", "search Pinterest/Cosmos/Awwwards for...", "what are current patterns for..." — before committing to a direction, or when the user wants to choose from curated visual options in chat.
+description: Use when hunting for design references or inspiration before committing to a direction — "find examples of...", "search Pinterest/Cosmos/Awwwards/Mobbin for...", "what are current patterns for..." — to sweep sources, curate 5-8 annotated picks, and present a selectable board in chat. Precedes fable-style-extraction (which applies the chosen reference); not for cloning one site 1:1 (fable-site-replication).
+requires: [fable-design-dna]
+pairs_with: [fable-style-extraction, fable-design-critique]
 ---
 
 # Design Research
@@ -60,3 +62,23 @@ Either way, end with a one-line recommendation ("№3 fits your enemy-list best 
 - Averaging the whole board into mush — selection feeds ONE primary reference (style-extraction's rule).
 - Presenting references from memory without fetching — patterns drift; verify they look like you claim today.
 - Treating a reference board as license to copy identity — logos, mascots, copy stay with their owners (per fable-style-extraction).
+
+## Worked Example
+
+Brief: hero section for a fintech app.
+
+**Frame** — job: hero for a fintech app · feeling: trustworthy but not boring · enemy: the blue-gradient-and-3D-card cliché every neobank ships.
+**Vectors** — "editorial fintech landing", "pricing toggle interactions", "scroll-driven product story".
+**One annotated pick** (target shape):
+> №2 — stripe.com/pricing · Pattern: pricing tiers that reorder on annual/monthly toggle · Steal: the toggle-driven reflow · Ignore: their blurple palette, their copy · Recency: current wave
+**Recommendation** — "№2 fits your enemy-list best: motion that earns trust without a single gradient card."
+
+Why: one concrete pick teaches the annotation grammar (name the pattern → steal the mechanic → ignore the identity) better than any abstract rule.
+
+## Ship Gate
+
+Before calling it done, self-check against this skill's own non-negotiables, then hand to fable-design-critique for an independent pass:
+- [ ] 5–8 picks, no more; each cites a source I actually fetched today, not memory.
+- [ ] No two picks demonstrate the same move; each names ONE pattern with a steal/ignore split.
+- [ ] Every pick maps back to the framed job/feeling/enemy — not "looks nice".
+- [ ] Board ends with a single numbered recommendation tied to the enemy line.

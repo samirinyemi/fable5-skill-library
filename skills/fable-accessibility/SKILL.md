@@ -1,6 +1,8 @@
 ---
 name: fable-accessibility
-description: Use when building or auditing any interface for accessibility — WCAG compliance, screen readers, keyboard navigation, color blindness, motion sensitivity — or as a pre-ship pass on any design work meant for real users or client delivery.
+description: Use when making an interface usable by everyone — contrast, focus states, keyboard navigation, screen-reader semantics, accessible forms, and WCAG 2.2 — or as the accessibility ship-gate before delivering any design work.
+requires: [fable-design-dna]
+pairs_with: [fable-color-craft, fable-motion-design, fable-product-ui, fable-design-critique]
 ---
 
 # Accessibility
@@ -10,6 +12,8 @@ description: Use when building or auditing any interface for accessibility — W
 Accessibility is craft, not compliance paperwork: the same discipline that makes design good makes it usable by everyone. Fable's method: **build it in as you design (it's nearly free), audit before shipping (it's expensive after), and treat every requirement as a design constraint that usually improves the work.**
 
 **REQUIRED BACKGROUND:** fable-design-dna.
+
+**This skill is the single source of truth for contrast ratios and `prefers-reduced-motion` contracts** — fable-color-craft and the motion skills reference the numbers defined here rather than restating them. Hand off explicitly: for reduced-motion *fallback craft* see fable-motion-design; for *verifying* the 4.5:1 / 3:1 ratios and both-theme contrast see fable-color-craft; for form/modal/dropdown component mechanics see fable-product-ui; run fable-design-critique as the final pre-ship pass.
 
 ## The Non-Negotiables (design-time)
 
@@ -43,7 +47,35 @@ Unplug the mouse. Tab through the page: Can you reach everything interactive, in
 
 ## Common Mistakes
 
-- Suppressing focus outlines because "they're ugly" — design a beautiful one instead; that's the actual assignment.
-- `aria-label` sprinkled as a fix-all while the underlying markup is div soup — semantics first, ARIA to fill gaps only.
-- Testing only the happy visual path: accessibility failures live in states — errors, loading, empty, keyboard-open.
-- Treating it as a final checklist item: retrofitting focus order and semantics costs 10× building them in.
+| Never | Do instead |
+|---|---|
+| Suppress the focus outline because it's "ugly" | Design a 2px+ `:focus-visible` outline — that IS the assignment |
+| `aria-label` over div soup as a fix-all | Native semantics first; ARIA only to fill genuine gaps |
+| Test only the happy visual path | Test error / loading / empty / keyboard-open states |
+| Retrofit focus order and semantics at the end | Build them in as you design — retrofitting costs 10× |
+
+## Worked Example
+
+The single most important move: real semantics + named, non-color-only feedback.
+
+```html
+<!-- BEFORE -->
+<div class="btn" onclick="del()">Delete</div>
+<span style="color:red">Invalid</span>          <!-- outline:none somewhere in CSS -->
+
+<!-- AFTER -->
+<button type="button" onclick="del()">Delete</button>   <!-- :focus-visible outline in CSS -->
+<label for="email">Email</label>
+<input id="email" aria-describedby="email-err">
+<p id="email-err" aria-live="polite">⚠ Email is missing an @ — try name@site.com</p>
+```
+
+Why: the `<button>` is keyboard-operable and focus-visible for free; the `<label>` names the field for screen readers; the error is announced (`aria-live`), tied to its input, and carries an icon + text so it survives color blindness. The BEFORE fails all three silently.
+
+## Ship Gate
+
+Before calling it done, self-check against this skill's own non-negotiables, then hand to fable-design-critique for an independent pass:
+- [ ] Contrast verified in BOTH themes (4.5:1 body, 3:1 large/UI); meaning never carried by color alone
+- [ ] Visible `:focus-visible` outline on every interactive element; Keyboard Test passed (reach, order, escape, skip link)
+- [ ] Real semantics — one `<h1>`, ordered headings, `<button>`/`<a>` not div soup; every input labeled with announced errors
+- [ ] States tested (error / loading / empty / keyboard-open) and `prefers-reduced-motion` honored

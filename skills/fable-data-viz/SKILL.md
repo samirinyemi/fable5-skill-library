@@ -1,6 +1,8 @@
 ---
 name: fable-data-viz
-description: Use when designing charts, graphs, KPIs, sparklines, or data-heavy dashboards and reports — or when existing charts are cluttered, misleading, rainbow-colored, or fail to make their point at a glance.
+description: Use when choosing a chart/KPI/sparkline's form, emphasis, honesty, and decluttering so it makes one clear claim — or when fixing charts that are cluttered, misleading, or rainbow-colored. (Chart-rendering code → dataviz skill; full dashboard layout → fable-product-ui.)
+requires: [fable-design-dna]
+pairs_with: [fable-color-craft, fable-product-ui, fable-presentation-design, fable-design-critique]
 ---
 
 # Data Visualization
@@ -35,6 +37,7 @@ Gridlines to 6–10% opacity or gone; axis lines lighter than data; direct-label
 - Annotate the moment that matters ON the chart ("price change here") — don't make readers cross-reference prose.
 - Palettes by data type: sequential (light→dark of one hue) for magnitude, diverging (two hues through neutral) for above/below, categorical (max 6, colorblind-safe) for kinds. Semantic good/bad colors stay reserved for status, per fable-color-craft.
 - Meaning never in hue alone — vary lightness too, and label directly.
+- **Ownership:** the multi-series categorical/sequential/diverging chart palette is the sanctioned EXCEPTION to fable-color-craft's one-accent rule; this skill owns the chart palette and chart-transition timing end-to-end.
 
 ## Dashboard Numbers
 
@@ -51,3 +54,19 @@ Bar axes start at zero, always (truncated bars are lies with gridlines). Line ax
 - The 9-slice pie where five slices are unreadable slivers.
 - Animating charts on every data refresh — animate on first load, then change values quietly.
 - Decorating weak data with strong styling; the declutter ritual exposes this immediately, which is the point.
+
+## Worked Example
+
+**Before:** 8-series line chart, 8 rainbow hues, a legend below, gridlines at 100%, titled "Regional revenue over time." Every line shouts; nothing is the point.
+
+**After:** Keep the one series the claim is about in accent, push the other 7 to a single grey. Direct-label the accent line and delete the legend. Retitle "EU revenue overtook US in Q3." Gridlines to 8%.
+
+Why: the claim now lives in the title and the accent; the greys are context, not competitors for attention.
+
+## Ship Gate
+
+Before calling it done, self-check against this skill's own non-negotiables, then hand to fable-design-critique for an independent pass:
+- [ ] Title is the conclusion ("Signups doubled"), not the topic ("Signups over time").
+- [ ] Accent is on exactly one series; everything else is grey context — cover the legend and you can still tell what the point is.
+- [ ] Bar axes touch zero; any zoomed line axis says so; no dual-axis correlation implied.
+- [ ] Declutter ritual done: gridlines ≤10%, no legend where direct labels fit, no 3D/shadows/gradients on data.

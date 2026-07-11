@@ -1,6 +1,8 @@
 ---
 name: fable-image-direction
-description: Use when choosing, treating, or generating imagery — photography, illustration, AI-generated images, hero visuals, product shots — or when a page's images look like they came from five different projects.
+description: Use when choosing, grading, or AI-generating a page's imagery as one consistent system — photography, illustration, 3D, hero and product shots — especially when images clash, look stock, or came from five different projects. (Color grade values come from fable-color-craft; page-wide grain/effects from fable-signature-effects.)
+requires: [fable-design-dna]
+pairs_with: [fable-editorial-design, fable-color-craft, fable-design-critique]
 ---
 
 # Image Direction
@@ -10,6 +12,8 @@ description: Use when choosing, treating, or generating imagery — photography,
 Imagery is a system, not a per-slot decision: one treatment, repeated, becomes identity — five styles on one page become noise. Fable's method: **pick one image language from the concept, define its treatment as written rules, and reject anything off-system no matter how good it looks alone.**
 
 **REQUIRED BACKGROUND:** fable-design-dna. Palette temperature from fable-color-craft; alt text from fable-accessibility.
+
+**BOUNDARY:** fable-color-craft owns the palette and what a duotone/tint *is*; this skill owns applying that grade *consistently across the image set*. Grain as a page-wide signature belongs to fable-signature-effects; grain as per-image texture is here.
 
 ## Choose ONE Language
 
@@ -40,8 +44,32 @@ Aspect-ratio boxes reserve space (zero layout shift); responsive sizes; modern f
 
 ## Common Mistakes
 
-- "Every section needs an image" — no. An image earns its slot as evidence or emotion; filler images dilute the real ones.
-- Baking headlines into images — breaks translation, accessibility, and responsive crops.
-- One gorgeous AI hero in a different universe from the inline photos.
-- Choosing images before the layout knows what the text needs (negative space, direction of gaze).
-- Treating the treatment as optional: the grade IS the brand; skipping it on one image breaks the set.
+| Never | Instead |
+|---|---|
+| An image per section as filler | Image earns its slot as evidence or emotion; filler dilutes the real ones |
+| Baking headlines into images | Set real type over negative space planned pre-generation |
+| One gorgeous AI hero in a different universe from inline photos | Regenerate the hero on the same style contract |
+| Choosing images before layout knows what the text needs | Plan negative space and gaze direction first, then generate |
+| Ungraded stock next to graded shots (the grade IS the brand) | Crop hard, apply the treatment-sheet grade to every asset |
+
+## Worked Example
+
+**Concept:** "a field guide to modern finance." **Language:** documentary photography, single source.
+
+**Style contract prompt** (reuse verbatim, swap `{SUBJECT}`):
+```
+{SUBJECT}, 35mm documentary photo, overcast north light, muted
+slate-and-ochre palette, shallow depth, faint film grain, no text, no logos.
+```
+
+**Grade:** −15% saturation, lifted blacks (#141414 floor), warm-tint overlay 8%. **Crop:** 3:2 hero, subject on right third, negative space left for headline.
+
+**Before:** three AI heroes — one glossy 3D, one stock-blue, one grainy film — three universes. **After:** regenerate all three on the contract, apply the grade → they read as siblings. *Why: consistency comes from the written contract and one grade, not from picking prettier individual frames.*
+
+## Ship Gate
+
+Before calling it done, self-check against this skill's own non-negotiables, then hand to fable-design-critique for an independent pass:
+- [ ] Every image passes the same treatment sheet — one grade, one crop family, one texture; no ungraded asset in the set.
+- [ ] No baked-in headline text; real type sits over pre-planned negative space.
+- [ ] No image would fit a competitor's site (stock is cropped hard and graded, or regenerated).
+- [ ] Aspect-ratio boxes reserve space (zero CLS); heroes under ~300KB in WebP/AVIF.

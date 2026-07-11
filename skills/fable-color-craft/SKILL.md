@@ -1,6 +1,8 @@
 ---
 name: fable-color-craft
-description: Use when building color palettes, theming (light/dark modes), choosing accents, fixing muddy or clashing colors, or when a design's color feels arbitrary, timid, or default-purple.
+description: Use when building or fixing a color palette — dominant field, neutrals, and the single accent — plus light/dark theming and functional colors; reach for this when color feels muddy, clashing, arbitrary, or default-purple. (Contrast checks live in fable-accessibility; multi-hue chart palettes in fable-data-viz.)
+requires: [fable-design-dna]
+pairs_with: [fable-typography, fable-brand-identity, fable-accessibility, fable-design-critique]
 ---
 
 # Color Craft
@@ -32,8 +34,8 @@ Color is a budget: you get one dominant statement, and everything else pays for 
 
 ## Contrast Discipline
 
-- Body text AA (4.5:1) minimum, headlines 3:1, interactive states verified in BOTH themes.
-- Never encode meaning in hue alone — pair with icon, weight, or label (8% of men can't see the difference you're relying on).
+- Contrast ratios and colorblind checks are owned by **fable-accessibility** — every palette must pass its checks in both themes. Don't restate the numbers here; go there.
+- Color-specific note: desaturate functional colors toward the field WITHOUT dropping below AA.
 
 ## Quick Reference
 
@@ -50,3 +52,17 @@ Color is a budget: you get one dominant statement, and everything else pays for 
 - Three competing saturated colors: each steals the others' meaning. One accent, promoted; others demoted or cut.
 - Pure-gray neutrals on a temperature-committed background (reads muddy).
 - Choosing colors on the artboard, not in context — judge color only in the real layout at real proportions.
+
+## Worked Example
+
+**BEFORE** — bg `#FFFFFF`, text `#333333`, three accents: `#6D5EF5` buttons / `#10B981` badges / `#F59E0B` links.
+**AFTER** — dominant warm paper `#FAF8F5`; neutrals tinted warm (`#2A2724` text → `#B8B2A8` muted); ONE accent `#C2410C` for actions and identity only; success/warn desaturated toward the field (`#5C7A5A`, `#B8863A`).
+**Why** — white + three saturated colors = "no decision was made." Promote one accent, demote the rest, and give the neutrals a temperature so nothing reads muddy.
+
+## Ship Gate
+
+Before calling it done, self-check against this skill's own non-negotiables, then hand to fable-design-critique for an independent pass:
+- [ ] Accent appears ≤5× per viewport (count it) and lands only on actions/identity, never decoration.
+- [ ] No pure `#FFF`/`#000`/pure-gray anywhere — neutrals are tinted toward the dominant hue.
+- [ ] Dark mode was re-derived, not inverted; accents desaturated 10–20% and contrast verified in BOTH themes via fable-accessibility.
+- [ ] Palette judged in the real layout at real proportions, not on an artboard.

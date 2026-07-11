@@ -1,6 +1,8 @@
 ---
 name: fable-animation-engineering
-description: Use when implementing animation in code — GSAP, ScrollTrigger, scroll-driven narratives, pinned sections, timelines, page transitions, text reveals — or when animations exist but feel janky, laggy, or amateur. The execution half of fable-motion-design.
+description: Use when implementing web animation in code (GSAP/ScrollTrigger, scroll-driven scenes, timelines, page transitions, text reveals) or when motion feels janky, laggy, or drops frames. The build-and-optimize half of fable-motion-design; for a single hero showpiece use fable-signature-effects, for hover/press component feedback use fable-micro-interactions.
+requires: [fable-design-dna, fable-motion-design]
+pairs_with: [fable-micro-interactions, fable-signature-effects, fable-accessibility, fable-design-critique]
 ---
 
 # Animation Engineering
@@ -50,3 +52,34 @@ Content is visible and readable with JavaScript disabled or failed. Set initial 
 - Desktop-tuned triggers broken by mobile viewport height — test trigger points at 375px.
 - 20 IntersectionObservers when one with multiple targets works.
 - Shipping the demo easing: linear scrub with no smoothing reads mechanical; add `scrub: 0.5+` or a lerp.
+
+## Worked Example
+
+The most important move: a layout change animated on the compositor, not by animating layout props.
+
+```js
+// BEFORE — drops frames, animates layout every frame:
+gsap.to('.card', { height: 480, marginTop: 40, duration: .6 });
+
+// AFTER — FLIP the layout change, transforms only:
+const s = Flip.getState('.card');
+card.classList.add('expanded');        // final layout lives in CSS
+Flip.from(s, { duration: .6, ease: 'power3.out' });
+```
+
+Why: layout thrash on every frame → one transform, holds 60fps on 6× CPU throttle.
+
+## Ship Gate
+
+Before calling it done, self-check against this skill's own non-negotiables, then hand to fable-design-critique for an independent pass:
+- [ ] Only `transform`/`opacity` animated — grep tweens for width/height/top/left/margin
+- [ ] Content readable with JS disabled; initial hidden states set from JS, never base CSS
+- [ ] `prefers-reduced-motion` swaps movement for fast opacity; content and feedback survive
+- [ ] Holds 60fps at 6× CPU throttle on a 375px viewport; no permanent `will-change`, scroll-linked motion uses `scrub`/lerp smoothing
+
+## References
+
+Load only when implementing, not when planning:
+
+- [references/gsap-patterns.md](references/gsap-patterns.md) — copy-ready GSAP/ScrollTrigger recipes: pinned sections, horizontal scroll, sticky stacking cards, number counters, magnetic text, bento grids, parallax, timeline choreography.
+- [references/premium-web-component-architecture.md](references/premium-web-component-architecture.md) — component structure for animation-heavy React/Next.js/Vite sites (cleanup patterns, `gsap.context`, SSR-safe mounting).

@@ -1,6 +1,8 @@
 ---
 name: fable-micro-interactions
-description: Use when designing or building component-level feedback — button presses, toggles, checkboxes, form focus, success ticks, toasts, hover states, loading feedback — or when an interface works but feels dead, mushy, or unresponsive to touch.
+description: Use when adding component-scale feedback to interactive controls — button press, toggle, checkbox, input focus, submit/success, copy, toast, skeleton, drag — or when a UI works but feels dead, mushy, or unresponsive to touch. Component states and sub-300ms feedback; page-level choreography belongs to fable-animation-engineering.
+requires: [fable-design-dna, fable-motion-design]
+pairs_with: [fable-animation-engineering, fable-product-ui, fable-design-critique]
 ---
 
 # Micro-Interactions
@@ -10,6 +12,8 @@ description: Use when designing or building component-level feedback — button 
 Micro-interactions are the sub-300ms layer where an interface stops being a picture and starts being a material. The rule: **every control acknowledges the user within 100ms, every state change animates from its current state, and nothing ever blocks input while performing.**
 
 **REQUIRED BACKGROUND:** fable-motion-design supplies the physics personality — micro-interactions express it at component scale. Page-level choreography belongs to fable-animation-engineering.
+
+**Boundary:** particle bursts / celebratory effects → fable-signature-effects; reduced-motion + focus-visible contracts → fable-accessibility.
 
 ## The State Inventory
 
@@ -41,9 +45,28 @@ Every interactive component ships felt feedback for: hover, press/active, focus-
 
 ## Common Mistakes
 
-- Delight on destructive actions — a bouncy delete confirmation reads as mockery.
-- 400ms+ toggles and checkboxes: controls are reflexes, not scenes.
-- Spinner for content loads where a skeleton preserves layout.
-- Animating on every keystroke (validate on blur; animate on state change, not input).
-- Toast confirmations for actions whose result is already visible on screen.
-- Feedback far from the finger/cursor: acknowledge where the interaction happened.
+| Never | Do instead |
+|---|---|
+| Delight on destructive actions (bouncy delete reads as mockery) | crisp neutral confirm, no bounce |
+| 400ms+ toggle or checkbox | 180–220ms with slight overshoot |
+| Spinner for content loads | skeleton matching the final layout |
+| Animate on every keystroke | validate on blur; animate on state change, not input |
+| Toast for on-screen results | acknowledge at the interaction point |
+| Feedback far from finger/cursor | acknowledge where the interaction happened |
+
+## Worked Example
+
+Submit button — from dead to crisp:
+
+**BEFORE:** disabled the instant you click, no press feedback, spinner flashes immediately, `alert()` on success.
+**AFTER:** `active:scale(0.97)` 100ms on press; on click the button stays interactive; delay the spinner 300ms; morph width label → spinner → checkmark 400ms, then reset; the success tick draws in place — no toast.
+
+Why: the press scale acknowledges the finger in <100ms, the 300ms delay stops the flicker on fast responses, and drawing the tick in place confirms where the action happened instead of pushing feedback to a distant corner.
+
+## Ship Gate
+
+Before calling it done, self-check against this skill's own non-negotiables, then hand to fable-design-critique for an independent pass:
+- [ ] Walk the State Inventory for every interactive element — hover, press/active, focus-visible, selected, disabled, loading, success, error all have felt feedback.
+- [ ] Press acknowledges in ≤100ms; every JS sequence kills or reverses on re-trigger (no queue).
+- [ ] No spinner before 300ms; content loads use a skeleton matching the final layout.
+- [ ] Every hover affordance has a visible or touch-native equivalent; no delight on destructive actions.

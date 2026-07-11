@@ -1,6 +1,8 @@
 ---
 name: fable-mobile-ui
-description: Use when designing mobile app interfaces (iOS/Android/React Native/Flutter) or mobile-first web apps — screens, flows, navigation, touch interactions — or when a mobile design feels cramped, desktop-shrunk, or fights the platform.
+description: Use when designing native or mobile-first app screens, flows, navigation, and touch interactions (iOS/Android/React Native/Flutter) — thumb ergonomics, one-job screens, platform physics — or when a mobile UI feels cramped, desktop-shrunk, or fights the platform. For responsive scaling of a marketing/web layout use fable-web-design.
+requires: [fable-design-dna]
+pairs_with: [fable-product-ui, fable-onboarding-empty-states, fable-accessibility, fable-design-critique]
 ---
 
 # Mobile UI
@@ -49,11 +51,37 @@ Name each screen's single job in a verb phrase ("choose a plan", "confirm the se
 
 ## States Are the Design
 
-For every screen ship all five: loading, empty (with a next action, not a shrug), error (with recovery), partial (1 item), full (1,000 items). The empty state is the first impression of every feature — design it like a hero.
+Ship all five states for every screen: loading, empty, error (with recovery), partial (1 item), full (1,000 items). For the empty and first-run states specifically, hand off to fable-onboarding-empty-states — do not reinvent them here.
 
 ## Common Mistakes
 
-- Shrinking a desktop layout instead of re-choreographing for one column and one thumb.
-- Hamburger menu as IA surrender — primary destinations belong on the bottom bar.
-- Hover-dependent affordances; mobile has no hover. State must be visible or discoverable by touch.
-- Ignoring the keyboard, the notch, or Android back — platform amnesia reads as cheapness instantly.
+| Never | Instead |
+|---|---|
+| Shrink a desktop layout to fit | Re-choreograph: one column, one thumb, one job |
+| Hamburger menu as primary IA | 3–5 labeled destinations on the bottom bar |
+| Hover-only affordance (mobile has no hover) | State visible or discoverable by touch |
+| Ignore keyboard, notch, or Android back | Design keyboard-open + safe-area + system-back state per screen |
+
+## Worked Example
+
+Desktop settings page → mobile. The cardinal sin is shrinking; re-choreograph instead.
+
+```
+BEFORE (shrunk desktop)          AFTER (re-choreographed)
+├ left nav rail + right form     ├ job: "edit one setting group"
+├ hamburger for the rail         ├ single column; groups = full-width
+├ two columns, 12pt labels       │   tappable rows → detail screens
+└ Save button top-right corner   ├ 16pt labels, one thumb reach
+                                 └ Save = bottom-third full-width;
+                                    top-right reserved for rare Reset
+```
+
+Why: the mobile version names one job and puts the primary action under the thumb, instead of cramming a two-column IA onto a phone.
+
+## Ship Gate
+
+Before calling it done, self-check against this skill's own non-negotiables, then hand to fable-design-critique for an independent pass:
+- [ ] Each screen names one job; nothing off-job survives on it.
+- [ ] Primary action in the bottom third; touch targets ≥44pt with ≥8pt gaps; no hover-only affordances.
+- [ ] All five states drawn (loading, empty, error, partial, full), plus keyboard-open and safe-area/notch states.
+- [ ] Layout was re-choreographed to one column, not a shrunk desktop; platform-native transitions and back behavior.

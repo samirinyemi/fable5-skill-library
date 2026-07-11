@@ -1,6 +1,8 @@
 ---
 name: fable-web-app-design
-description: Use when designing or elevating a web application's interface — dashboards, tools, editors, consoles, admin, workflow apps — beyond the generic template look into modern, crafted, owned UI. Studies app archetypes and the elevation moves the best products use.
+description: Use when designing or elevating the interface of a web APPLICATION (dashboard, tool/editor, developer console, CRM/records, chat, admin) — naming its archetype and spending a small expression budget to move it from generic-template to fast, crafted, owned. For marketing sites use fable-web-design; for calm/density fundamentals use fable-product-ui.
+requires: [fable-design-dna]
+pairs_with: [fable-product-ui, fable-design-systems, fable-onboarding-empty-states, fable-design-critique]
 ---
 
 # Web App Design
@@ -10,6 +12,8 @@ description: Use when designing or elevating a web application's interface — d
 Most web apps ship the same shell: a grey sidebar, Bootstrap-blue buttons, a table, and a modal. It works, and it is forgettable. This skill is about the gap between *functional* and *elevated* — how the best products (Linear, Vercel, Raycast, Stripe, Arc, Height, Family) make an application feel fast, modern, and **owned** without sacrificing the thousandth-session usability that product design demands.
 
 **REQUIRED BACKGROUND:** fable-design-dna. This is the elevation layer; pair it with **fable-product-ui** (the calm/clarity/density fundamentals it builds on), fable-design-systems (tokens), and fable-micro-interactions (the feedback that sells "fast").
+
+This skill owns **archetype selection and elevation direction only**. The interior fundamentals — calm, density zones, the five states, tabular numerals, motion timing — are owned by **fable-product-ui** and only summarized here as a pointer; do not re-teach them, defer the interior craft to it.
 
 **The core idea:** you do not "style" a web app. You **name its archetype**, honour that archetype's center of gravity, then spend a tiny, deliberate expression budget on the two or three moments that make it yours.
 
@@ -87,3 +91,25 @@ The generic trap is copying a look (someone's palette) instead of a mechanic (th
 ## When NOT to push
 
 Utility-dense cores — a data grid mid-task, a settings form, a log stream — earn clarity and speed over expression. The elevation there *is* the speed and the craft, not visual flourish. Spend the expression budget on the identity moments and let the work be quiet.
+
+## Worked Example
+
+The core move: name the archetype first, then let the hero dictate every choice.
+
+| Generic CRM | Elevated (named: *records app; hero = the record and its next action*) |
+|---|---|
+| Grey sidebar, blue Bootstrap buttons | Near-monochrome chrome, one accent on the primary action only |
+| Rainbow status pills (8 colors) | Status by shape + one hue; grey for the rest |
+| Amount column mis-aligned | Tabular-lining numerals, right-aligned |
+| Spinner while loading | Skeleton rows matching the table layout |
+| Row opens a modal to edit | Scannable rows with inline edit in place |
+
+Why: naming the hero (the record, its next action) turned six unrelated "styling" decisions into one coherent direction — the interior craft (states, density, numerals) is then executed via fable-product-ui.
+
+## Ship Gate
+
+Before calling it done, self-check against this skill's own non-negotiables, then hand to fable-design-critique for an independent pass:
+- [ ] Archetype named in one line, and every screen honors its hero and expression budget.
+- [ ] One accent, spent like money — ≤5 hits per view, on actions + selection only; chrome reads near-monochrome.
+- [ ] Elevation is speed and craft (optimistic UI, keyboard-first, tabular numerals, layout-matched skeletons), not decoration (gradients/glass/shadows).
+- [ ] Exemplars studied for the mechanic, not the paint — no copied palette standing in for a copied engine.

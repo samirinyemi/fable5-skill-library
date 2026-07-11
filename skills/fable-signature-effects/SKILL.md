@@ -1,6 +1,8 @@
 ---
 name: fable-signature-effects
-description: Use when building the one showpiece interactive effect — custom cursors, magnetic buttons, WebGL/canvas moments, gradient meshes, image trails, distortion hovers, grain — or when a site needs a memorable mechanic it can own.
+description: Use when building the ONE showpiece web mechanic a site owns — custom cursor, magnetic elements, image trail, gradient mesh, grain, WebGL distortion hover, reactive marquee, text scramble. Not per-component feedback (fable-micro-interactions) or timeline/scroll plumbing (fable-animation-engineering).
+requires: [fable-design-dna, fable-motion-design]
+pairs_with: [fable-animation-engineering, fable-award-winning-web, fable-design-critique]
 ---
 
 # Signature Effects
@@ -10,6 +12,8 @@ description: Use when building the one showpiece interactive effect — custom c
 From fable-award-winning-web's law: one signature interaction per site — three cancel each other. This skill is the execution catalog. The bar: **the effect expresses the brand's idea, runs at 60fps on a mid-range phone or degrades away, and the site remains excellent with the effect deleted.**
 
 **REQUIRED BACKGROUND:** fable-design-dna — the effect is derived from the concept sentence, never chosen from a trends list. Timing/physics from fable-motion-design.
+
+**Boundary:** component-level feedback (button press, toggle) is fable-micro-interactions; the render/timeline/scroll plumbing is fable-animation-engineering. This skill owns ONLY the single showpiece mechanic.
 
 ## Choosing the Effect
 
@@ -47,3 +51,19 @@ Everything pointer-driven interpolates — `pos += (target - pos) * 0.1` in a rA
 - Hiding the system cursor entirely and breaking form fields, text selection, resize handles.
 - Canvas intercepting clicks on the hero CTA — the effect literally costing conversions.
 - Choosing the effect from an Awwwards clone list instead of the brand's own idea.
+
+## Worked Example
+
+Concept sentence: *"A typography studio that treats letterforms as physical objects."*
+
+- **BEFORE:** picked a custom cursor because it looked cool on an Awwwards clone. Fits any brand → decoration, not signature.
+- **AFTER:** candidates were magnetic nav vs. WebGL displacement on the specimen grid. Chose the displacement hover — it literally makes letters behave like matter (idea-expressive), where a magnetic button would suit any brand. Ship: OGL displacement shader on the specimens, CSS-filter blur fallback, `hover:none` → static.
+- **Why:** kill-switch check — delete the effect and the oversized specimens still carry the site. PASS.
+
+## Ship Gate
+
+Before calling it done, self-check against this skill's own non-negotiables, then hand to fable-design-critique for an independent pass:
+- [ ] The concept sentence names the mechanic — it would NOT fit any other brand (not picked from a trends/Awwwards list).
+- [ ] 60fps on a throttled mid-range phone; every pointer-driven value LERPs (no 1:1 tracking).
+- [ ] `hover:none` and `prefers-reduced-motion` paths both tested; no WebGL degrades to a static/CSS fallback instead of erroring.
+- [ ] Canvas layers are `pointer-events:none` / z-indexed under UI — hero CTA still clickable, text selectable; delete the effect and the site is still excellent.

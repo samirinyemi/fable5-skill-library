@@ -1,6 +1,8 @@
 ---
 name: fable-figma-craft
-description: Use when designing or building inside Figma — file structure, auto-layout, variables, components, variants, prototyping, dev handoff — or when a Figma file has become canvas soup: detached instances, hardcoded values, unnavigable pages.
+description: Use when working IN Figma — structuring files, building auto-layout + variables, componentizing with variants, prototyping the golden path, or prepping dev handoff — or when a Figma file is canvas soup (detached instances, raw hex, unnavigable pages). For token DEFINITION see fable-design-systems; this skill implements them in Figma.
+requires: [fable-design-dna, fable-design-systems]
+pairs_with: [fable-design-systems, fable-design-critique]
 ---
 
 # Figma Craft
@@ -24,7 +26,7 @@ Pages in a fixed order: **Cover** (project, status, owner) → **✅ Ready** (so
 
 ## Variables & Styles
 
-Two collections mirroring fable-design-systems: **Primitives** (raw values, no opinions) and **Semantic** (roles — `color/action`, `color/surface-raised`, `space/section`) with light/dark modes. Screens consume semantic only. Type and effect styles named by role, not appearance ("text/heading-lg", never "Bold 24"). The audit: select-all on a Ready screen — any unbound fill or raw hex is a bug.
+fable-design-systems is the source of truth for the token architecture; this skill only implements it as Figma variables. Two collections mirroring it: **Primitives** (raw values, no opinions) and **Semantic** (roles — `color/action`, `color/surface-raised`, `space/section`) with light/dark modes. Screens consume semantic only. Type and effect styles named by role, not appearance ("text/heading-lg", never "Bold 24"). The audit: select-all on a Ready screen — any unbound fill or raw hex is a bug.
 
 ## Components
 
@@ -44,3 +46,20 @@ Prototype the golden path only — enough to feel the flow; smart-animate state 
 - The 40-variant monster component nobody can use — split by role instead.
 - Prototyping every edge case (weeks of wiring, minutes of value) instead of the one path that sells the flow.
 - Treating Figma structure as beneath the craft: the file IS the studio others visit.
+
+## Worked Example
+
+Fixing a drifting Button:
+
+- **BEFORE:** 14 separate Button frames, fills hardcoded `#2F6BFF`, 13px left padding, sizes hand-dragged.
+- **AFTER:** 1 component, variants `{intent: primary/secondary/ghost} × {state: default/hover/focus/disabled/loading}`, fill bound to `color/action`, padding `space/sm` (8) + `space/md` (16), resizing = hug.
+
+Why: 14 drifting frames collapse to 1 component + instances; a select-all audit now shows 0 raw hex. Variants model states, not near-copies — one matrix, not a 40-frame monster.
+
+## Ship Gate
+
+Before calling it done, self-check against this skill's own non-negotiables, then hand to fable-design-critique for an independent pass:
+- [ ] Stranger finds the current design in 30s (page order + frame naming)
+- [ ] Select-all on every Ready screen: 0 unbound fills / raw hex / off-scale spacing
+- [ ] All interactive states present on the component sheet; 0 detached instances
+- [ ] Edge content (longest string, empty, error) shown once per template; prototype covers the golden path only

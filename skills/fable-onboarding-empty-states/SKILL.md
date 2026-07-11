@@ -1,6 +1,8 @@
 ---
 name: fable-onboarding-empty-states
-description: Use when designing first-run experiences, signup flows, onboarding, setup checklists, or empty states — or when new users drop off before reaching value, or every empty screen says "No data" with a sad illustration.
+description: Use when designing onboarding, first-run/signup flows, setup checklists, or empty states (lists, dashboards, no-results, error, cleared) — or when new users drop off before first value, or empty screens are a dead-end "No data" + sad illustration.
+requires: [fable-design-dna]
+pairs_with: [fable-product-ui, fable-ux-copywriting, fable-mobile-ui, fable-design-critique]
 ---
 
 # Onboarding & Empty States
@@ -44,3 +46,23 @@ Encouraging, specific, never blaming, and matched to stakes (per fable-ux-copywr
 - Demanding setup (integrations, imports, team invites) before showing any value.
 - The same empty component for first-run and error states.
 - Measuring onboarding by completion of onboarding — measure activation; the flow is scaffolding, not the building.
+
+## Worked Example
+
+**BEFORE:** centered gray box, sad-cloud illustration, "No data yet." Dead end.
+
+**AFTER:**
+- heading: "Your invoices will live here"
+- subtext: "Sent invoices and their status show up in this list."
+- primary button: "Send your first invoice"
+- muted secondary: "Import from Stripe"
+
+Same component — but now it teaches the feature and offers the real first action instead of a shrug.
+
+## Ship Gate
+
+Before calling it done, self-check against this skill's own non-negotiables, then hand to fable-design-critique for an independent pass:
+- [ ] I can name the activation moment in one sentence, and every onboarding step shortens the path to it.
+- [ ] first-run, cleared, no-results, and error are four distinct empty designs — not one "No data" shrug.
+- [ ] Each first-run empty state has exactly ONE real-action CTA (the real thing, not "Learn more").
+- [ ] No question is asked that doesn't personalize the path, and no celebration fires before the user has done anything.

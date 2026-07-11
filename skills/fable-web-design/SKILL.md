@@ -1,6 +1,8 @@
 ---
 name: fable-web-design
-description: Use when designing or building websites, landing pages, marketing pages, SaaS homepages, or any page meant to communicate and convert — especially when a draft looks like a template or fails to convert attention into action.
+description: Use when designing a marketing/landing/SaaS-marketing page whose job is to communicate a message and convert a visitor — NOT the logged-in app UI (fable-web-app-design) or an awards-tier showpiece (fable-award-winning-web) — especially when the draft reads like a template or fails to turn attention into action.
+requires: [fable-design-dna]
+pairs_with: [fable-award-winning-web, fable-typography, fable-motion-design, fable-design-critique]
 ---
 
 # Web Design
@@ -9,7 +11,12 @@ description: Use when designing or building websites, landing pages, marketing p
 
 A website is an argument: every viewport either advances the case or loses the reader. Fable's web method: **message architecture first, then a layout that dramatizes the message, then conversion mechanics that feel like hospitality, not pressure.**
 
-**REQUIRED BACKGROUND:** fable-design-dna. For prestige-tier experiences, escalate to fable-award-winning-web.
+**Chains with:**
+- requires: fable-design-dna
+- headlines/CTA copy → fable-ux-copywriting
+- long-form / content-dense sections → fable-editorial-design
+- prestige / cinematic tier → fable-award-winning-web
+- verify before done → fable-design-critique
 
 ## Message Architecture (before any layout)
 
@@ -48,3 +55,19 @@ A website is an argument: every viewport either advances the case or loses the r
 - Designing sections before writing the argument — produces beautiful pages that say nothing.
 - Treating mobile as a stacked afterthought: 60%+ of traffic sees that version first. Design the narrow argument, too.
 - Shipping the first hero. Write 5 headline options; the first is always the most generic.
+
+## Worked Example: hero rewrite
+
+**Before:** H1 "Unlock your team's potential" / sub "The all-in-one platform" / two buttons (Start free, Book demo) + logo carousel.
+
+**After (method applied):** Promise = "Ship your changelog in one click"; proof = a 6s clip of exactly that; one action, "Start free — no card"; the "is it real?" objection handled by one customer sentence beside the CTA; logos moved below.
+
+Why: one promise, one proof, one action. The vague verb and the competing CTA are gone.
+
+## Ship Gate
+
+Before calling it done, self-check against this skill's own non-negotiables, then hand to fable-design-critique for an independent pass:
+- [ ] Read top-to-bottom ignoring visuals — does the copy alone run Promise → Proof → Objection → Ask?
+- [ ] Cover the hero visual — does the headline still earn 10 more seconds (no vague verbs)?
+- [ ] One CTA, same words and look, everywhere? No two adjacent sections share a skeleton?
+- [ ] At 375px, is the narrow argument designed — not just stacked?

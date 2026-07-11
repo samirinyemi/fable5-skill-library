@@ -1,6 +1,8 @@
 ---
 name: fable-presentation-design
-description: Use when designing slides, pitch decks, keynotes, client presentations, or any deck (.pptx, Canva, Google Slides, HTML slides) — or when a deck reads like a document projected on a wall.
+description: Use when designing slides, pitch decks, keynotes, or any deck (.pptx, Canva, Google Slides, HTML slides) — turning topic-title, text-dense slides into billboard-clear ones read in three seconds from across a room.
+requires: [fable-design-dna]
+pairs_with: [fable-typography, fable-data-viz, fable-portfolio-case-study, fable-design-critique]
 ---
 
 # Presentation Design
@@ -45,3 +47,25 @@ Strip chart junk (gridlines to 10% opacity, no 3D, no legend if labels fit on th
 - Topic titles ("Q3 Results") that make the audience do the analysis — that's your job.
 - Shrinking type to fit content instead of cutting content to fit type.
 - Deck-wide template amnesia: logo swaps, drifting margins, three shades of the accent by slide 20. The system is the professionalism.
+
+## Worked Example
+
+Storyboard the titles alone — they must persuade before any layout exists.
+
+```
+BEFORE (topic titles)        AFTER (takeaway headlines — the storyboard)
+1. Market Overview           1. Support tickets doubled while headcount stayed flat   (situation)
+2. Current Support Metrics   2. Agents now close 40% fewer tickets per shift          (tension)
+3. Proposed Solution         3. One AI triage layer clears the repetitive 60%         (resolution)
+4. Financials                4. $1.2M saved in year one, live in 6 weeks              (ask)
+```
+
+Why: read AFTER top-to-bottom and the argument lands with the deck muted. The BEFORE column makes the audience do the analysis — that was your job.
+
+## Ship Gate
+
+Before calling it done, self-check against this skill's own non-negotiables, then hand to fable-design-critique for an independent pass:
+- [ ] Read only the slide titles top to bottom — do they alone tell the situation → tension → resolution → ask and land the ask? If not, the headlines aren't carrying the deck.
+- [ ] No slide breaks the billboard rules: >40 words, >1 idea, body <24pt, or bullets shrunk to fit instead of content cut.
+- [ ] One accent, one grid, 4–5 reused master layouts — no second accent shade, drifting margins, or bespoke one-off slides.
+- [ ] Every chart is one number huge + one sentence with the full chart in the appendix; craft deferred to fable-data-viz.

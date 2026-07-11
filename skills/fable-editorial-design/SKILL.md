@@ -1,6 +1,8 @@
 ---
 name: fable-editorial-design
-description: Use when designing editorial experiences — magazines, blogs, longform articles, case studies, news layouts, digital publications, content-heavy pages — or when text-heavy design feels like an undifferentiated wall of words.
+description: Use when designing reading-first editorial layouts — magazines, blogs, longform articles, news, digital publications — pacing text with grid, type voice, and planned interruptions; NOT for portfolio case-study narratives (use fable-portfolio-case-study) or the type system itself (fable-typography).
+requires: [fable-design-dna]
+pairs_with: [fable-typography, fable-image-direction, fable-design-critique]
 ---
 
 # Editorial Design
@@ -9,7 +11,7 @@ description: Use when designing editorial experiences — magazines, blogs, long
 
 Editorial design is pacing: the art of making someone *want* to keep reading. Fable's method borrows from print masters: **a real grid, a strong typographic voice, and planned interruptions that reset attention every few hundred words.**
 
-**REQUIRED BACKGROUND:** fable-design-dna. Pair with fable-typography for the type system itself.
+**REQUIRED BACKGROUND:** fable-design-dna. Pair with fable-typography for the type system itself, fable-image-direction for full-bleed/column/margin image sizing, and fable-color-craft for the accent/kicker color.
 
 ## The Grid Is the Personality
 
@@ -44,7 +46,26 @@ Plan a "reset" every 300–500 words — a pull quote, full-bleed image, big sta
 
 ## Common Mistakes
 
-- Centered body text — long reading demands a hard left edge.
-- Uniform image sizes throughout — kills pacing; size = editorial importance.
-- Decorating instead of pacing: ornaments between identical walls of text don't reset attention, structure does.
-- Forgetting the reading environment: dark-mode reading, mobile 1-column measure, and print stylesheets are part of editorial craft.
+| Never | Do instead | e.g. |
+|---|---|---|
+| Center body text | Hard left edge, ragged right | centering is for <3-line decks only |
+| Uniform image sizes | Size = editorial importance | full-bleed / column / margin |
+| Ornaments between identical text walls | Structural resets (quote, stat, break) | ornament decorates, structure paces |
+| Forget the reading environment | Design dark mode, mobile 1-col, print too | all three are editorial craft |
+
+## Worked Example
+
+Killing the wall of words — a 1100-word article:
+
+- **Before:** single 12-col-wide column, 16px/1.4 body, every image the same 640px, no pull quotes, a 28px H1.
+- **After:** body reflowed onto cols 3–8 (68ch) at 19px/1.7; a dropped initial opens the piece; an 84px display headline (1.05 leading) replaces the H1; a 34px pull quote breaks onto col 9 at ~word 350; the hero image bleeds full-12 while two reference diagrams shrink to margin-size.
+
+Why: three planned resets now fall inside the first 700 words, so the reader recommits instead of drowning.
+
+## Ship Gate
+
+Before calling it done, self-check against this skill's own non-negotiables, then hand to fable-design-critique for an independent pass:
+- [ ] Body measure lands in 60–75ch on desktop and collapses to one readable column on mobile.
+- [ ] A planned reset (pull quote / full-bleed / stat / break) falls at least every 300–500 words.
+- [ ] Every furniture style (kicker, headline, standfirst, body, subhead, pull quote, caption) is used exactly once as a fixed style — no ad-hoc sizes.
+- [ ] Image sizes vary by editorial importance (full-bleed / column / margin), and it's checked in dark mode and print.
