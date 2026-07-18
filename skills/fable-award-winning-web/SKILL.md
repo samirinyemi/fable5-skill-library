@@ -26,7 +26,7 @@ Award-level is a moving bar — calibrate against what is winning NOW, not remem
 | Pinterest | `https://www.pinterest.com/search/pins/?q=` | broad art-direction boards, type/image treatments |
 | Godly | `https://godly.website/` | modern web, filterable by section |
 
-**Reliable Awwwards fetch (no browser needed):** run `bash ~/.claude/skills/fable-design-research/scripts/awwwards-live-urls.sh [limit] [query]` — returns `slug | live-site-URL` pairs for current winners via curl. Then fetch 2–3 of the live sites themselves and do forensics: measure the type scale and palette from their CSS, and read their `<script>` tags for the motion stack — `gsap`, `lenis`, `three`, `webgl` in the bundle names tell you exactly how the motion is made.
+**Reliable Awwwards fetch (no browser needed):** run `bash ~/.claude/skills/fable-design-research/scripts/awwwards-live-urls.sh [limit] [query]` — returns `slug | live-site-URL` pairs via curl. Sweep BOTH pools: winners (default gallery or `"/websites/sites_of_the_day/"`) for the proven bar, and **nominees** (`"/websites/nominees/"` as the third arg) for the freshest work — submitted daily, ahead of the winner cycle. Then fetch 2–3 of the live sites themselves and do forensics: measure the type scale and palette from their CSS, and read their `<script>` tags for the motion stack — `gsap`, `lenis`, `three`, `webgl` in the bundle names tell you exactly how the motion is made.
 
 Include a **3D/immersive vector** when the brief can carry it: WebGL heroes, 3D type, particle scenes, scroll-driven cameras — search those terms explicitly, don't wait to stumble on them.
 

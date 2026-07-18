@@ -4,7 +4,8 @@
 #   ./awwwards-live-urls.sh                          # latest winners gallery
 #   ./awwwards-live-urls.sh 8                        # limit (default 6)
 #   ./awwwards-live-urls.sh 6 "portfolio"            # search query
-#   ./awwwards-live-urls.sh 6 "" "/websites/sites_of_the_day/"   # specific gallery path
+#   ./awwwards-live-urls.sh 6 "" "/websites/sites_of_the_day/"   # winners (Site of the Day)
+#   ./awwwards-live-urls.sh 6 "" "/websites/nominees/"             # NOMINEES — freshest work, submitted daily, pre-win
 # Output: one line per winner ->  slug | https://live-site.com
 set -euo pipefail
 LIMIT="${1:-6}"; QUERY="${2:-}"; GALLERY_PATH="${3:-/websites/}"
