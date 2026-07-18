@@ -17,7 +17,7 @@ Reference hunting on autopilot: sweep the web for how the best work solves this 
 
 Before searching, write three lines: the **job** (hero for a fintech app), the **feeling** (trustworthy but not boring), and the **enemy** (what the user is tired of seeing). Search without a frame and you'll collect pretty things that solve someone else's problem.
 
-Derive 3–4 search vectors: by aesthetic ("brutalist editorial landing"), by component ("pricing table interactions"), by industry ("fintech dashboard design"), by technique ("scroll-driven storytelling").
+Derive 3–4 search vectors: by aesthetic ("brutalist editorial landing"), by component ("pricing table interactions"), by industry ("fintech dashboard design"), by technique ("scroll-driven storytelling"), by dimension when the brief can carry it ("webgl 3d hero", "3d typography", "particle scene", "immersive scroll").
 
 ## Phase 2 — Sweep the Sources
 
@@ -42,6 +42,7 @@ Replace `QUERY` with URL-encoded terms (spaces → `%20` or `+`). Pinterest/Cosm
 ## Phase 3 — Curate the Board
 
 - **5–8 picks maximum.** Each earns its place for ONE nameable pattern; cut duplicates that demonstrate the same move.
+- **Spread across sources — the anti-copy rule.** Picks must span at least TWO sources (Awwwards + Cosmos + Pinterest + Godly…), and downstream work may take **at most one move per pick**. A board sourced from one site, or a design assembled from one reference, is replication wearing a research costume — route that to fable-site-replication honestly instead.
 - Annotate every pick: source + link, **the pattern it demonstrates** ("nav that collapses into a pill on scroll"), **what to steal** (the mechanic), **what to ignore** (their palette, their content).
 - Note recency — a 2019 pattern may read as dated; say when something is a classic vs. a current wave.
 - Pull or screenshot images into the chat when the environment allows; otherwise link + a one-line visual description precise enough to choose by.
@@ -79,6 +80,7 @@ Why: one concrete pick teaches the annotation grammar (name the pattern → stea
 
 Before calling it done, self-check against this skill's own non-negotiables, then hand to fable-design-critique for an independent pass:
 - [ ] 5–8 picks, no more; each cites a source I actually fetched today, not memory.
+- [ ] Picks span at least two sources; no single site dominates the board.
 - [ ] No two picks demonstrate the same move; each names ONE pattern with a steal/ignore split.
 - [ ] Every pick maps back to the framed job/feeling/enemy — not "looks nice".
 - [ ] Board ends with a single numbered recommendation tied to the enemy line.

@@ -15,15 +15,20 @@ Award-level sites win on three axes: **a singular concept, typography as the sta
 **Chains with:** fable-signature-effects (build the one signature mechanic) · fable-motion-design + fable-animation-engineering (entrance/scroll choreography) · fable-typography (display-face selection) · fable-editorial-design (asymmetric grid breakouts).
 **Finish with:** fable-design-critique — REQUIRED before shipping.
 
-## Phase 0 — Study Current Winners (mandatory when web access exists)
+## Phase 0 — Multi-Source Inspiration Sweep (mandatory when web access exists)
 
-Award-level is a moving bar — calibrate against what is winning NOW, not remembered patterns. Before designing, pull 3–5 current Awwwards winners in the project's genre and visit the actual sites (thumbnails hide the motion):
+Award-level is a moving bar — calibrate against what is winning NOW, not remembered patterns. Pull **5–8 references across at least THREE sources** — never one site, never one source:
 
-- Winners gallery, filterable by category/tag: `https://www.awwwards.com/websites/`
-- Sites of the Day: `https://www.awwwards.com/websites/sites_of_the_day/`
-- Themed collections: `https://www.awwwards.com/inspiration/` (search e.g. "scroll-animations", "typography")
+| Source | Entry | What it gives |
+|---|---|---|
+| Awwwards | `https://www.awwwards.com/websites/` · `/websites/sites_of_the_day/` · `/inspiration/` | current winners — visit the actual sites, thumbnails hide the motion |
+| Cosmos | `https://www.cosmos.so/search?q=` | taste-forward curation — try "webgl hero", "3d web", "immersive scroll" |
+| Pinterest | `https://www.pinterest.com/search/pins/?q=` | broad art-direction boards, type/image treatments |
+| Godly | `https://godly.website/` | modern web, filterable by section |
 
-Distill each winner into three lines: its concept sentence, its ONE signature move, its type/motion attitude. **Steal the level, not the layout** (fable-style-extraction's rule) — the sweep sets the bar; the concept still comes from YOUR brief via fable-design-dna. Use fable-design-research for the sweep/curation mechanics. No web access this session? Say so and proceed from the formula below — never fake a reference you didn't see.
+Include a **3D/immersive vector** when the brief can carry it: WebGL heroes, 3D type, particle scenes, scroll-driven cameras — search those terms explicitly, don't wait to stumble on them.
+
+**The anti-copy contract:** distill each reference into ONE move (its concept sentence, its signature mechanic, or its type/motion attitude) and take **at most one move per reference**. A design assembled from one site is a copy; a design assembled from six moves across four sources is a point of view. Steal the level, not the layout — the concept still comes from YOUR brief via fable-design-dna. Use fable-design-research for sweep/curation mechanics. No web access this session? Say so and proceed from the formula below — never fake a reference you didn't see.
 
 ## The Award Formula
 
@@ -71,7 +76,7 @@ Why: the type *is* the concept, not a label for it; the off-grid treated image a
 ## Ship Gate
 
 Before calling it done, self-check against this skill's own non-negotiables, then hand to **fable-design-critique** for an independent pass:
-- [ ] Current-winner sweep done (or explicitly noted as unavailable) — the bar was calibrated, not remembered.
+- [ ] Multi-source sweep done: 5–8 references, ≥3 sources, at most one move taken per reference (or sweep explicitly noted as unavailable).
 - [ ] Concept is legible in the first viewport in <1s — screenshot the hero and squint.
 - [ ] Exactly ONE signature interaction, not two or three.
 - [ ] Mobile carries the same concept (type still oversized, interactions touch-native) — not a stripped grid.

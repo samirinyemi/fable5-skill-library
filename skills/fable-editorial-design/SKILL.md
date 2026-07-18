@@ -15,12 +15,13 @@ Editorial design is pacing: the art of making someone *want* to keep reading. Fa
 
 ## Reference Sweep (before layout, when web access exists)
 
-Editorial taste lives on curated boards — pull 3–5 print-grade references before committing to a grid:
+Editorial taste lives on curated boards — pull **4–6 print-grade references across at least TWO sources** before committing to a grid:
 
 - **Cosmos:** `https://www.cosmos.so/search?q=editorial+layout` (login-walled — use browser tools; also try "magazine spread", "swiss typography")
 - **Pinterest:** `https://www.pinterest.com/search/pins/?q=editorial+design+layout` or web search `site:pinterest.com magazine grid design`
+- **Savee:** `https://savee.it/` (login-walled) · **Godly:** `https://godly.website/` for digital editorial
 
-Extract the *mechanic* from each pick — a pull-quote break, a margin-hung caption, a dropped-initial treatment, an asymmetric image pairing — never the artwork or the copy. Use fable-design-research for sweep/curation discipline. No web access? Proceed from the rules below; never cite a reference you didn't fetch.
+**One mechanic per reference, never more.** Extract a single move from each pick — a pull-quote break, a margin-hung caption, a dropped-initial treatment, an asymmetric image pairing — never the artwork, the copy, or a whole spread. A layout rebuilt from a single pin is a copy; a layout composed of five mechanics from three boards is editorial craft. Use fable-design-research for sweep/curation discipline. No web access? Proceed from the rules below; never cite a reference you didn't fetch.
 
 ## The Grid Is the Personality
 
