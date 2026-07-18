@@ -2,7 +2,7 @@
 name: fable-typography
 description: Use when choosing or pairing typefaces, building type scales, setting headline/body sizing, leading, tracking, or line length — or when type feels default, flat, or unreadable. Governs the type itself across web, mobile, and brand; for page-level longform pacing use fable-editorial-design.
 requires: [fable-design-dna]
-pairs_with: [fable-color-craft, fable-editorial-design, fable-brand-identity, fable-design-critique]
+pairs_with: [fable-color-craft, fable-editorial-design, fable-brand-identity, fable-design-critique, fable-design-research]
 ---
 
 # Typography
@@ -12,6 +12,10 @@ pairs_with: [fable-color-craft, fable-editorial-design, fable-brand-identity, fa
 Typography is 90% of interface design and 100% of its tone. Fable's method: **cast typefaces like actors, size them on a dramatic scale, and sweat the invisible details (leading, tracking, rhythm) that separate set type from typed text.**
 
 **REQUIRED BACKGROUND:** fable-design-dna.
+
+## Reference Sweep (before designing, when web access exists)
+
+Don't design from defaults — sweep first. Run fable-design-research's multi-source sweep (≥2 sources, at most one move per reference) with this domain's vectors: "type specimen", "editorial typography", "display type pairing" — Cosmos/Pinterest first, then the type in live Awwwards winners. Fold the findings into the system you commit BEFORE any pixel: the values this skill owns must trace to the swept board or to a deliberate rejection of it — a random pick next to a researched board is the tell of generic work. No web access? Say so and design from this skill's rules — never cite a reference you didn't fetch.
 
 ## Casting, Not Choosing
 

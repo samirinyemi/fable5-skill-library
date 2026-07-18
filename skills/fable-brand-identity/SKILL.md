@@ -2,7 +2,7 @@
 name: fable-brand-identity
 description: Use when defining a brand's core identity — positioning, tension/enemy, logo/wordmark idea, the one ownable color, signature element, and voice card — or when a brand feels interchangeable with competitors. Delegates palette-building to fable-color-craft, type craft to fable-typography, and copy to fable-ux-copywriting.
 requires: [fable-design-dna]
-pairs_with: [fable-typography, fable-color-craft, fable-ux-copywriting, fable-design-critique]
+pairs_with: [fable-typography, fable-color-craft, fable-ux-copywriting, fable-design-critique, fable-design-research]
 ---
 
 # Brand Identity
@@ -19,6 +19,10 @@ A brand is a repeated, ownable decision. Fable's method: **find the one true ten
 - Voice sentences, banned words, microcopy → fable-ux-copywriting (this skill only fixes the 3 adjectives + one rewrite)
 - Signature element as a reusable token → fable-design-systems
 - **Final pass (required before done): fable-design-critique**
+
+## Reference Sweep (before designing, when web access exists)
+
+Don't design from defaults — sweep first. Run fable-design-research's multi-source sweep (≥2 sources, at most one move per reference) with this domain's vectors: "brand identity system", "visual identity board", "logo grid" — Cosmos/Pinterest/Behance. Fold the findings into the system you commit BEFORE any pixel: the values this skill owns must trace to the swept board or to a deliberate rejection of it — a random pick next to a researched board is the tell of generic work. No web access? Say so and design from this skill's rules — never cite a reference you didn't fetch.
 
 ## Strategy Before Style
 

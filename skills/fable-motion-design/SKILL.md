@@ -2,7 +2,7 @@
 name: fable-motion-design
 description: Use when deciding a product's motion strategy — what should move, why, and its timing/physics personality — before implementing, or when an interface feels static and dead, or conversely janky, floaty, and over-animated. Sets the direction that fable-animation-engineering, fable-micro-interactions, and fable-signature-effects execute.
 requires: [fable-design-dna]
-pairs_with: [fable-animation-engineering, fable-micro-interactions, fable-signature-effects, fable-design-critique]
+pairs_with: [fable-animation-engineering, fable-micro-interactions, fable-signature-effects, fable-design-critique, fable-design-research]
 ---
 
 # Motion Design
@@ -14,6 +14,10 @@ Motion is the interface's body language. Fable's method: **every animation answe
 **REQUIRED BACKGROUND:** fable-design-dna. This skill sets direction; for implementation use fable-animation-engineering (page/scroll choreography), fable-micro-interactions (component feedback), and fable-signature-effects (the one showpiece).
 
 Boundary: component hover/press feedback → fable-micro-interactions; GSAP/ScrollTrigger code → fable-animation-engineering.
+
+## Reference Sweep (before designing, when web access exists)
+
+Don't design from defaults — sweep first. Run fable-design-research's multi-source sweep (≥2 sources, at most one move per reference) with this domain's vectors: "scroll animations" (awwwards.com/inspiration/scroll-animations), "web motion design", "page transition" — visit live sites, motion never shows in thumbnails. Fold the findings into the system you commit BEFORE any pixel: the values this skill owns must trace to the swept board or to a deliberate rejection of it — a random pick next to a researched board is the tell of generic work. No web access? Say so and design from this skill's rules — never cite a reference you didn't fetch.
 
 ## The Three Legitimate Jobs
 

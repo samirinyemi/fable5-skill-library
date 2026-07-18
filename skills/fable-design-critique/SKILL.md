@@ -70,6 +70,7 @@ Why it works: each pass fixes the *single* highest failing rung and reloads the 
 
 - Would a stranger remember anything about this tomorrow?
 - If I saw this in someone else's portfolio, would I be impressed or would I scroll past?
+- Does it hold up against the CURRENT bar? When judging award-tier work with web access, pull 2–3 live winners (fable-design-research's sources) and compare — a remembered bar is a low bar.
 - What would a designer I admire delete first?
 - Is anything here only there because the first draft had it? (Sunk-cost elements)
 - Does the mobile/narrow version hold the same concept, or is it a stacked apology?

@@ -2,7 +2,7 @@
 name: fable-presentation-design
 description: Use when designing slides, pitch decks, keynotes, or any deck (.pptx, Canva, Google Slides, HTML slides) — turning topic-title, text-dense slides into billboard-clear ones read in three seconds from across a room.
 requires: [fable-design-dna]
-pairs_with: [fable-typography, fable-data-viz, fable-portfolio-case-study, fable-design-critique]
+pairs_with: [fable-typography, fable-data-viz, fable-portfolio-case-study, fable-design-critique, fable-design-research]
 ---
 
 # Presentation Design
@@ -12,6 +12,10 @@ pairs_with: [fable-typography, fable-data-viz, fable-portfolio-case-study, fable
 A slide is a billboard, not a document: it's read in three seconds from across a room while someone talks over it. Fable's method: **one idea per slide, the idea stated as the headline, and detail moved to the voice (or the appendix) where it belongs.**
 
 **REQUIRED BACKGROUND:** fable-design-dna. Type and color rules come from fable-typography and fable-color-craft, tightened for distance.
+
+## Reference Sweep (before designing, when web access exists)
+
+Don't design from defaults — sweep first. Run fable-design-research's multi-source sweep (≥2 sources, at most one move per reference) with this domain's vectors: "pitch deck design", "keynote slide layout" — Pinterest/Behance boards. Fold the findings into the system you commit BEFORE any pixel: the values this skill owns must trace to the swept board or to a deliberate rejection of it — a random pick next to a researched board is the tell of generic work. No web access? Say so and design from this skill's rules — never cite a reference you didn't fetch.
 
 ## The Headline Carries the Slide
 

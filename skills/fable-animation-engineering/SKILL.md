@@ -2,7 +2,7 @@
 name: fable-animation-engineering
 description: Use when implementing web animation in code (GSAP/ScrollTrigger, scroll-driven scenes, timelines, page transitions, text reveals) or when motion feels janky, laggy, or drops frames. The build-and-optimize half of fable-motion-design; for a single hero showpiece use fable-signature-effects, for hover/press component feedback use fable-micro-interactions.
 requires: [fable-design-dna, fable-motion-design]
-pairs_with: [fable-micro-interactions, fable-signature-effects, fable-accessibility, fable-design-critique]
+pairs_with: [fable-micro-interactions, fable-signature-effects, fable-accessibility, fable-design-critique, fable-design-research]
 ---
 
 # Animation Engineering
@@ -12,6 +12,10 @@ pairs_with: [fable-micro-interactions, fable-signature-effects, fable-accessibil
 fable-motion-design decides what moves and when; this skill builds it without jank. The craft: **choreograph in timelines, render on the compositor, and let content live without JavaScript.** An animation that drops frames is worse than no animation — it converts "premium" into "broken."
 
 **REQUIRED BACKGROUND:** fable-motion-design for timing/personality. For component-level feedback use fable-micro-interactions; for the one showpiece effect, fable-signature-effects.
+
+## Reference Sweep (before designing, when web access exists)
+
+Don't design from defaults — sweep first. Run fable-design-research's multi-source sweep (≥2 sources, at most one move per reference) with this domain's vectors: "gsap scroll site", "webgl scroll experience" — visit live Awwwards winners and study how the motion FEELS before building. Fold the findings into the system you commit BEFORE any pixel: the values this skill owns must trace to the swept board or to a deliberate rejection of it — a random pick next to a researched board is the tell of generic work. No web access? Say so and design from this skill's rules — never cite a reference you didn't fetch.
 
 ## Pick the Right Engine
 

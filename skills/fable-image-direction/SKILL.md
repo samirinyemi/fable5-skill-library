@@ -2,7 +2,7 @@
 name: fable-image-direction
 description: Use when choosing, grading, or AI-generating a page's imagery as one consistent system — photography, illustration, 3D, hero and product shots — especially when images clash, look stock, or came from five different projects. (Color grade values come from fable-color-craft; page-wide grain/effects from fable-signature-effects.)
 requires: [fable-design-dna]
-pairs_with: [fable-editorial-design, fable-color-craft, fable-design-critique]
+pairs_with: [fable-editorial-design, fable-color-craft, fable-design-critique, fable-design-research]
 ---
 
 # Image Direction
@@ -14,6 +14,10 @@ Imagery is a system, not a per-slot decision: one treatment, repeated, becomes i
 **REQUIRED BACKGROUND:** fable-design-dna. Palette temperature from fable-color-craft; alt text from fable-accessibility.
 
 **BOUNDARY:** fable-color-craft owns the palette and what a duotone/tint *is*; this skill owns applying that grade *consistently across the image set*. Grain as a page-wide signature belongs to fable-signature-effects; grain as per-image texture is here.
+
+## Reference Sweep (before designing, when web access exists)
+
+Don't design from defaults — sweep first. Run fable-design-research's multi-source sweep (≥2 sources, at most one move per reference) with this domain's vectors: "art direction photography", "editorial duotone", "3d render style" — Cosmos/Pinterest/Savee boards. Fold the findings into the system you commit BEFORE any pixel: the values this skill owns must trace to the swept board or to a deliberate rejection of it — a random pick next to a researched board is the tell of generic work. No web access? Say so and design from this skill's rules — never cite a reference you didn't fetch.
 
 ## Choose ONE Language
 

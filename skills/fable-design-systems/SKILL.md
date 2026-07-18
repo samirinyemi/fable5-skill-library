@@ -2,7 +2,7 @@
 name: fable-design-systems
 description: Use when building the reusable token + component layer — design tokens, semantic theming, component-library API and states, drift audits — that other screens consume; NOT for one-off screen visuals (fable-product-ui) or the Figma-file mechanics of variables/instances (fable-figma-craft).
 requires: [fable-design-dna]
-pairs_with: [fable-figma-craft, fable-typography, fable-color-craft, fable-product-ui, fable-design-critique]
+pairs_with: [fable-figma-craft, fable-typography, fable-color-craft, fable-product-ui, fable-design-critique, fable-design-research]
 ---
 
 # Design Systems
@@ -12,6 +12,10 @@ pairs_with: [fable-figma-craft, fable-typography, fable-color-craft, fable-produ
 A design system is taste made enforceable. Fable's method: **tokens encode the decisions, components encode the behaviors, and the system stays smaller than the product it serves.** A system that tries to cover everything covers nothing well.
 
 **REQUIRED BACKGROUND:** fable-design-dna. The token values themselves come from fable-typography, fable-color-craft, fable-motion-design.
+
+## Reference Sweep (before designing, when web access exists)
+
+Don't design from defaults — sweep first. Run fable-design-research's multi-source sweep (≥2 sources, at most one move per reference) with this domain's vectors: "design system documentation", "design tokens" — published systems (Polaris, Carbon, Primer) + Figma community. Fold the findings into the system you commit BEFORE any pixel: the values this skill owns must trace to the swept board or to a deliberate rejection of it — a random pick next to a researched board is the tell of generic work. No web access? Say so and design from this skill's rules — never cite a reference you didn't fetch.
 
 ## Token Architecture (two layers, no more)
 

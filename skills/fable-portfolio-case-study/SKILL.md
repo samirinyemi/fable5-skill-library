@@ -2,7 +2,7 @@
 name: fable-portfolio-case-study
 description: Use when writing a portfolio or client case study — narrating finished design work as decisions-with-reasons and outcomes — especially when strong work reads flat because it's told as a chronological activity log. (For the page's visual layout, pair with fable-editorial-design.)
 requires: [fable-design-dna, fable-editorial-design]
-pairs_with: [fable-presentation-design, fable-design-critique, fable-ux-copywriting, fable-image-direction]
+pairs_with: [fable-presentation-design, fable-design-critique, fable-ux-copywriting, fable-image-direction, fable-design-research]
 ---
 
 # Portfolio Case Study
@@ -12,6 +12,10 @@ pairs_with: [fable-presentation-design, fable-design-critique, fable-ux-copywrit
 A case study sells judgment, not pixels: hiring managers and clients skim for **how you think** and whether outcomes followed. Fable's method: structure it as decisions-with-reasons, show the work at editorial scale, and cut everything that is merely "what happened next."
 
 **REQUIRED BACKGROUND:** fable-design-dna. The page itself follows fable-editorial-design — a case study IS an editorial artifact.
+
+## Reference Sweep (before designing, when web access exists)
+
+Don't design from defaults — sweep first. Run fable-design-research's multi-source sweep (≥2 sources, at most one move per reference) with this domain's vectors: "portfolio case study layout" — Awwwards portfolio category + live designer portfolios. Fold the findings into the system you commit BEFORE any pixel: the values this skill owns must trace to the swept board or to a deliberate rejection of it — a random pick next to a researched board is the tell of generic work. No web access? Say so and design from this skill's rules — never cite a reference you didn't fetch.
 
 ## The Structure (in reading order)
 

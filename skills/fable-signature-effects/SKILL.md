@@ -2,7 +2,7 @@
 name: fable-signature-effects
 description: Use when building the ONE showpiece web mechanic a site owns — custom cursor, magnetic elements, image trail, gradient mesh, grain, WebGL distortion hover, reactive marquee, text scramble. Not per-component feedback (fable-micro-interactions) or timeline/scroll plumbing (fable-animation-engineering).
 requires: [fable-design-dna, fable-motion-design]
-pairs_with: [fable-animation-engineering, fable-award-winning-web, fable-design-critique]
+pairs_with: [fable-animation-engineering, fable-award-winning-web, fable-design-critique, fable-design-research]
 ---
 
 # Signature Effects
@@ -14,6 +14,10 @@ From fable-award-winning-web's law: one signature interaction per site — three
 **REQUIRED BACKGROUND:** fable-design-dna — the effect is derived from the concept sentence, never chosen from a trends list. Timing/physics from fable-motion-design.
 
 **Boundary:** component-level feedback (button press, toggle) is fable-micro-interactions; the render/timeline/scroll plumbing is fable-animation-engineering. This skill owns ONLY the single showpiece mechanic.
+
+## Reference Sweep (before designing, when web access exists)
+
+Don't design from defaults — sweep first. Run fable-design-research's multi-source sweep (≥2 sources, at most one move per reference) with this domain's vectors: "custom cursor site", "webgl hover distortion", "gradient mesh", "3d particle scene" — live Awwwards/Godly winners only, the mechanic is invisible in stills. Fold the findings into the system you commit BEFORE any pixel: the values this skill owns must trace to the swept board or to a deliberate rejection of it — a random pick next to a researched board is the tell of generic work. No web access? Say so and design from this skill's rules — never cite a reference you didn't fetch.
 
 ## Choosing the Effect
 

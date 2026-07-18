@@ -2,7 +2,7 @@
 name: fable-color-craft
 description: Use when building or fixing a color palette — dominant field, neutrals, and the single accent — plus light/dark theming and functional colors; reach for this when color feels muddy, clashing, arbitrary, or default-purple. (Contrast checks live in fable-accessibility; multi-hue chart palettes in fable-data-viz.)
 requires: [fable-design-dna]
-pairs_with: [fable-typography, fable-brand-identity, fable-accessibility, fable-design-critique]
+pairs_with: [fable-typography, fable-brand-identity, fable-accessibility, fable-design-critique, fable-design-research]
 ---
 
 # Color Craft
@@ -12,6 +12,10 @@ pairs_with: [fable-typography, fable-brand-identity, fable-accessibility, fable-
 Color is a budget: you get one dominant statement, and everything else pays for it. Fable's method: **derive the palette from the concept's emotional temperature, spend saturation in exactly one place, and build neutrals with a soul.**
 
 **REQUIRED BACKGROUND:** fable-design-dna.
+
+## Reference Sweep (before designing, when web access exists)
+
+Don't design from defaults — sweep first. Run fable-design-research's multi-source sweep (≥2 sources, at most one move per reference) with this domain's vectors: "editorial color palette", "duotone website", "warm neutral palette" — Cosmos/Pinterest, plus palettes measured from live award sites. Fold the findings into the system you commit BEFORE any pixel: the values this skill owns must trace to the swept board or to a deliberate rejection of it — a random pick next to a researched board is the tell of generic work. No web access? Say so and design from this skill's rules — never cite a reference you didn't fetch.
 
 ## The Palette Recipe
 

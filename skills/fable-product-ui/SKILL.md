@@ -2,7 +2,7 @@
 name: fable-product-ui
 description: Use when refining the interior craft of a data-heavy product — tables, forms, settings, admin panels, dashboards — for calm, scannable, low-fatigue daily use; when a working UI feels cluttered or noisy. For picking an app's overall archetype/elevation, use fable-web-app-design first.
 requires: [fable-design-dna]
-pairs_with: [fable-web-app-design, fable-design-systems, fable-onboarding-empty-states, fable-accessibility, fable-design-critique]
+pairs_with: [fable-web-app-design, fable-design-systems, fable-onboarding-empty-states, fable-accessibility, fable-design-critique, fable-design-research]
 ---
 
 # Product UI
@@ -10,6 +10,10 @@ pairs_with: [fable-web-app-design, fable-design-systems, fable-onboarding-empty-
 ## Overview
 
 Product UI is design for the thousandth use, not the first impression. Fable's method: **calm surfaces, ruthless information hierarchy, and interfaces that get out of the way of work.** Expression lives in marketing; here, restraint IS the personality.
+
+## Reference Sweep (before designing, when web access exists)
+
+Don't design from defaults — sweep first. Run fable-design-research's multi-source sweep (≥2 sources, at most one move per reference) with this domain's vectors: "dashboard ui", "data table design", "settings page" — Mobbin screens first, then live products. Fold the findings into the system you commit BEFORE any pixel: the values this skill owns must trace to the swept board or to a deliberate rejection of it — a random pick next to a researched board is the tell of generic work. No web access? Say so and design from this skill's rules — never cite a reference you didn't fetch.
 
 ## Chain
 

@@ -2,7 +2,7 @@
 name: fable-onboarding-empty-states
 description: Use when designing onboarding, first-run/signup flows, setup checklists, or empty states (lists, dashboards, no-results, error, cleared) — or when new users drop off before first value, or empty screens are a dead-end "No data" + sad illustration.
 requires: [fable-design-dna]
-pairs_with: [fable-product-ui, fable-ux-copywriting, fable-mobile-ui, fable-design-critique]
+pairs_with: [fable-product-ui, fable-ux-copywriting, fable-mobile-ui, fable-design-critique, fable-design-research]
 ---
 
 # Onboarding & Empty States
@@ -12,6 +12,10 @@ pairs_with: [fable-product-ui, fable-ux-copywriting, fable-mobile-ui, fable-desi
 Empty is the default state of every new account, and first-run is the product's first argument. Fable's method: **find the activation moment, build the shortest honest path to it, and design every empty state as the hero of its feature — because for a new user, that's exactly what it is.**
 
 **REQUIRED BACKGROUND:** fable-design-dna. Copy is the main material here — fable-ux-copywriting applies to every string.
+
+## Reference Sweep (before designing, when web access exists)
+
+Don't design from defaults — sweep first. Run fable-design-research's multi-source sweep (≥2 sources, at most one move per reference) with this domain's vectors: "onboarding flow", "empty state design" — Mobbin flows are the primary source here. Fold the findings into the system you commit BEFORE any pixel: the values this skill owns must trace to the swept board or to a deliberate rejection of it — a random pick next to a researched board is the tell of generic work. No web access? Say so and design from this skill's rules — never cite a reference you didn't fetch.
 
 ## Onboarding = Path to Activation
 

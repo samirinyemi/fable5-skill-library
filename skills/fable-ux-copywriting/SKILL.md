@@ -2,7 +2,7 @@
 name: fable-ux-copywriting
 description: Use when writing or fixing the actual words in a UI — headlines, button labels, error messages, form helper text, microcopy — or when a layout is strong but the copy reads vague, hypey, or robotic. (Flow/layout for onboarding and empty states: pair with fable-onboarding-empty-states.)
 requires: [fable-design-dna, fable-brand-identity]
-pairs_with: [fable-onboarding-empty-states, fable-design-critique]
+pairs_with: [fable-onboarding-empty-states, fable-design-critique, fable-design-research]
 ---
 
 # UX Copywriting
@@ -12,6 +12,10 @@ pairs_with: [fable-onboarding-empty-states, fable-design-critique]
 Copy is design material, not filler poured into design. A generic headline drags down a great layout faster than a bad font. Fable's method: **write from the reader's side of the screen, be specific to the point of discomfort, and make every interactive word state its consequence.**
 
 **REQUIRED BACKGROUND:** fable-design-dna — the voice comes from the same one-sentence direction as the visuals.
+
+## Reference Sweep (before designing, when web access exists)
+
+Don't design from defaults — sweep first. Run fable-design-research's multi-source sweep (≥2 sources, at most one move per reference) with this domain's vectors: "onboarding copy", "empty state microcopy" — Mobbin screens + real product sites; steal voice patterns, never sentences. Fold the findings into the system you commit BEFORE any pixel: the values this skill owns must trace to the swept board or to a deliberate rejection of it — a random pick next to a researched board is the tell of generic work. No web access? Say so and design from this skill's rules — never cite a reference you didn't fetch.
 
 ## Headlines
 

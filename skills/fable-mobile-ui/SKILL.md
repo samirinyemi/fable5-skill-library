@@ -2,7 +2,7 @@
 name: fable-mobile-ui
 description: Use when designing native or mobile-first app screens, flows, navigation, and touch interactions (iOS/Android/React Native/Flutter) — thumb ergonomics, one-job screens, platform physics — or when a mobile UI feels cramped, desktop-shrunk, or fights the platform. For responsive scaling of a marketing/web layout use fable-web-design.
 requires: [fable-design-dna]
-pairs_with: [fable-product-ui, fable-onboarding-empty-states, fable-accessibility, fable-design-critique]
+pairs_with: [fable-product-ui, fable-onboarding-empty-states, fable-accessibility, fable-design-critique, fable-design-research]
 ---
 
 # Mobile UI
@@ -12,6 +12,10 @@ pairs_with: [fable-product-ui, fable-onboarding-empty-states, fable-accessibilit
 Mobile design is choreography for one thumb and eight seconds of attention. Fable's method: **one job per screen, thumb-first ergonomics, platform-native physics, and typography that survives sunlight.**
 
 **REQUIRED BACKGROUND:** fable-design-dna.
+
+## Reference Sweep (before designing, when web access exists)
+
+Don't design from defaults — sweep first. Run fable-design-research's multi-source sweep (≥2 sources, at most one move per reference) with this domain's vectors: "ios app design", "mobile navigation patterns" — Mobbin screens are the primary source here. Fold the findings into the system you commit BEFORE any pixel: the values this skill owns must trace to the swept board or to a deliberate rejection of it — a random pick next to a researched board is the tell of generic work. No web access? Say so and design from this skill's rules — never cite a reference you didn't fetch.
 
 ## One Job Per Screen
 

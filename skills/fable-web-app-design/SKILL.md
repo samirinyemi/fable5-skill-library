@@ -2,7 +2,7 @@
 name: fable-web-app-design
 description: Use when designing or elevating the interface of a web APPLICATION (dashboard, tool/editor, developer console, CRM/records, chat, admin) — naming its archetype and spending a small expression budget to move it from generic-template to fast, crafted, owned. For marketing sites use fable-web-design; for calm/density fundamentals use fable-product-ui.
 requires: [fable-design-dna]
-pairs_with: [fable-product-ui, fable-design-systems, fable-onboarding-empty-states, fable-design-critique]
+pairs_with: [fable-product-ui, fable-design-systems, fable-onboarding-empty-states, fable-design-critique, fable-design-research]
 ---
 
 # Web App Design
@@ -16,6 +16,10 @@ Most web apps ship the same shell: a grey sidebar, Bootstrap-blue buttons, a tab
 This skill owns **archetype selection and elevation direction only**. The interior fundamentals — calm, density zones, the five states, tabular numerals, motion timing — are owned by **fable-product-ui** and only summarized here as a pointer; do not re-teach them, defer the interior craft to it.
 
 **The core idea:** you do not "style" a web app. You **name its archetype**, honour that archetype's center of gravity, then spend a tiny, deliberate expression budget on the two or three moments that make it yours.
+
+## Reference Sweep (before designing, when web access exists)
+
+Don't design from defaults — sweep first. Run fable-design-research's multi-source sweep (≥2 sources, at most one move per reference) with this domain's vectors: "web app ui", "developer console design", "crm interface" — Mobbin + Godly + the best-in-archetype live products. Fold the findings into the system you commit BEFORE any pixel: the values this skill owns must trace to the swept board or to a deliberate rejection of it — a random pick next to a researched board is the tell of generic work. No web access? Say so and design from this skill's rules — never cite a reference you didn't fetch.
 
 ## Phase 1 — Name the Archetype
 

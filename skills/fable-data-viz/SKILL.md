@@ -2,7 +2,7 @@
 name: fable-data-viz
 description: Use when choosing a chart/KPI/sparkline's form, emphasis, honesty, and decluttering so it makes one clear claim — or when fixing charts that are cluttered, misleading, or rainbow-colored. (Chart-rendering code → dataviz skill; full dashboard layout → fable-product-ui.)
 requires: [fable-design-dna]
-pairs_with: [fable-color-craft, fable-product-ui, fable-presentation-design, fable-design-critique]
+pairs_with: [fable-color-craft, fable-product-ui, fable-presentation-design, fable-design-critique, fable-design-research]
 ---
 
 # Data Visualization
@@ -12,6 +12,10 @@ pairs_with: [fable-color-craft, fable-product-ui, fable-presentation-design, fab
 A chart is a sentence: it makes ONE claim, and everything on it either supports the claim or is noise. Fable's method: **choose the form from the claim, strip everything that isn't evidence, and spend the accent on the one series that carries the point.**
 
 **REQUIRED BACKGROUND:** fable-design-dna. Color budget from fable-color-craft; dashboard context from fable-product-ui.
+
+## Reference Sweep (before designing, when web access exists)
+
+Don't design from defaults — sweep first. Run fable-design-research's multi-source sweep (≥2 sources, at most one move per reference) with this domain's vectors: "data visualization design", "annual report charts", "dashboard analytics" — Pinterest/Cosmos + real analytics products. Fold the findings into the system you commit BEFORE any pixel: the values this skill owns must trace to the swept board or to a deliberate rejection of it — a random pick next to a researched board is the tell of generic work. No web access? Say so and design from this skill's rules — never cite a reference you didn't fetch.
 
 ## Form Follows Claim
 

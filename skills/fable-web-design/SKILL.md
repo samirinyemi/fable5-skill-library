@@ -2,7 +2,7 @@
 name: fable-web-design
 description: Use when designing a marketing/landing/SaaS-marketing page whose job is to communicate a message and convert a visitor — NOT the logged-in app UI (fable-web-app-design) or an awards-tier showpiece (fable-award-winning-web) — especially when the draft reads like a template or fails to turn attention into action.
 requires: [fable-design-dna]
-pairs_with: [fable-award-winning-web, fable-typography, fable-motion-design, fable-design-critique]
+pairs_with: [fable-award-winning-web, fable-typography, fable-motion-design, fable-design-critique, fable-design-research]
 ---
 
 # Web Design
@@ -17,6 +17,10 @@ A website is an argument: every viewport either advances the case or loses the r
 - long-form / content-dense sections → fable-editorial-design
 - prestige / cinematic tier → fable-award-winning-web
 - verify before done → fable-design-critique
+
+## Reference Sweep (before designing, when web access exists)
+
+Don't design from defaults — sweep first. Run fable-design-research's multi-source sweep (≥2 sources, at most one move per reference) with this domain's vectors: "landing page design", "saas marketing site", "hero section" — Awwwards/Godly first, Pinterest for art direction. Fold the findings into the system you commit BEFORE any pixel: the values this skill owns must trace to the swept board or to a deliberate rejection of it — a random pick next to a researched board is the tell of generic work. No web access? Say so and design from this skill's rules — never cite a reference you didn't fetch.
 
 ## Message Architecture (before any layout)
 

@@ -2,7 +2,7 @@
 name: fable-micro-interactions
 description: Use when adding component-scale feedback to interactive controls — button press, toggle, checkbox, input focus, submit/success, copy, toast, skeleton, drag — or when a UI works but feels dead, mushy, or unresponsive to touch. Component states and sub-300ms feedback; page-level choreography belongs to fable-animation-engineering.
 requires: [fable-design-dna, fable-motion-design]
-pairs_with: [fable-animation-engineering, fable-product-ui, fable-design-critique]
+pairs_with: [fable-animation-engineering, fable-product-ui, fable-design-critique, fable-design-research]
 ---
 
 # Micro-Interactions
@@ -14,6 +14,10 @@ Micro-interactions are the sub-300ms layer where an interface stops being a pict
 **REQUIRED BACKGROUND:** fable-motion-design supplies the physics personality — micro-interactions express it at component scale. Page-level choreography belongs to fable-animation-engineering.
 
 **Boundary:** particle bursts / celebratory effects → fable-signature-effects; reduced-motion + focus-visible contracts → fable-accessibility.
+
+## Reference Sweep (before designing, when web access exists)
+
+Don't design from defaults — sweep first. Run fable-design-research's multi-source sweep (≥2 sources, at most one move per reference) with this domain's vectors: "button interaction", "ui feedback animation" — Mobbin flows + live product sites, feel the press states yourself. Fold the findings into the system you commit BEFORE any pixel: the values this skill owns must trace to the swept board or to a deliberate rejection of it — a random pick next to a researched board is the tell of generic work. No web access? Say so and design from this skill's rules — never cite a reference you didn't fetch.
 
 ## The State Inventory
 

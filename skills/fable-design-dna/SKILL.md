@@ -2,7 +2,7 @@
 name: fable-design-dna
 description: Use when starting ANY Fable design task — before layout, color, or code — to set concept-first direction and kill generic/"AI-made"/template output; the mindset layer every other fable-* skill builds on and hands craft rules to.
 requires: [(none)]
-pairs_with: [fable-design-critique]
+pairs_with: [fable-design-research, fable-design-critique]
 ---
 
 # Fable Design DNA
@@ -16,10 +16,11 @@ This is how Fable 5 thinks before it designs. Every strong design decision flows
 Every design task runs this loop — no exceptions:
 
 1. **INTERROGATE** — Who is this for? What single feeling must it produce (trust, desire, calm, urgency)? What will make someone remember it tomorrow?
-2. **COMMIT** — Choose ONE bold aesthetic direction and write it down in a sentence ("brutalist confidence with editorial warmth"). Every later decision is tested against this sentence.
-3. **CONSTRAIN** — Before designing, fix one committed system per axis (type, color, space, radius, motion) — defer the exact values to the domain skill for that axis: type pairing → fable-typography; palette → fable-color-craft; spacing/radius system → fable-design-systems.
-4. **EXECUTE** — Build with the system. When tempted to add variety, add depth instead.
-5. **CRITIQUE** — Look at the result as a skeptical creative director. Find the weakest element. Fix it. Repeat until nothing embarrasses you.
+2. **SWEEP** (when web access exists) — Before committing, run fable-design-research's multi-source sweep (Awwwards, Cosmos, Pinterest, Godly, Mobbin — ≥2 sources, at most one move per reference). The board calibrates the bar and feeds COMMIT and CONSTRAIN; it never replaces your concept. No web access? Say so and proceed — never cite a reference you didn't fetch.
+3. **COMMIT** — Choose ONE bold aesthetic direction and write it down in a sentence ("brutalist confidence with editorial warmth"). Every later decision is tested against this sentence.
+4. **CONSTRAIN** — Before designing, fix one committed system per axis (type, color, space, radius, motion) — **derived from the swept board, not from defaults.** Every committed value must trace to a reference on the board or to a deliberate rejection of it; a random font next to a researched board is the tell of generic work. Defer the exact values to the domain skill for that axis: type pairing → fable-typography; palette → fable-color-craft; spacing/radius system → fable-design-systems.
+5. **EXECUTE** — Build with the system. When tempted to add variety, add depth instead.
+6. **CRITIQUE** — Look at the result as a skeptical creative director. Find the weakest element. Fix it. Repeat until nothing embarrasses you.
 
 Do not declare done until you have run the Red Flags checklist below AND invoked fable-design-critique on the output. If any red flag fires, return to COMMIT.
 
