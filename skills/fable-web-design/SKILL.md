@@ -20,7 +20,7 @@ A website is an argument: every viewport either advances the case or loses the r
 
 ## Reference Sweep (before designing, when web access exists)
 
-Don't design from defaults — sweep first. Run fable-design-research's multi-source sweep (≥2 sources, at most one move per reference) with this domain's vectors: "landing page design", "saas marketing site", "hero section" — Awwwards/Godly first, Pinterest for art direction. Fold the findings into the system you commit BEFORE any pixel: the values this skill owns must trace to the swept board or to a deliberate rejection of it — a random pick next to a researched board is the tell of generic work. No web access? Say so and design from this skill's rules — never cite a reference you didn't fetch.
+Don't design from defaults — sweep first. Run fable-design-research's multi-source sweep (≥2 sources, at most one move per reference) with this domain's vectors: "landing page design", "saas marketing site", "hero section" — Awwwards/Godly first, Pinterest for art direction. For live Awwwards winner URLs without browser tools: `bash ~/.claude/skills/fable-design-research/scripts/awwwards-live-urls.sh [limit] [query]`. Fold the findings into the system you commit BEFORE any pixel: the values this skill owns must trace to the swept board or to a deliberate rejection of it — a random pick next to a researched board is the tell of generic work. No web access? Say so and design from this skill's rules — never cite a reference you didn't fetch.
 
 ## Message Architecture (before any layout)
 

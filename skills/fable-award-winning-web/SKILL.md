@@ -26,6 +26,8 @@ Award-level is a moving bar — calibrate against what is winning NOW, not remem
 | Pinterest | `https://www.pinterest.com/search/pins/?q=` | broad art-direction boards, type/image treatments |
 | Godly | `https://godly.website/` | modern web, filterable by section |
 
+**Reliable Awwwards fetch (no browser needed):** run `bash ~/.claude/skills/fable-design-research/scripts/awwwards-live-urls.sh [limit] [query]` — returns `slug | live-site-URL` pairs for current winners via curl. Then fetch 2–3 of the live sites themselves and do forensics: measure the type scale and palette from their CSS, and read their `<script>` tags for the motion stack — `gsap`, `lenis`, `three`, `webgl` in the bundle names tell you exactly how the motion is made.
+
 Include a **3D/immersive vector** when the brief can carry it: WebGL heroes, 3D type, particle scenes, scroll-driven cameras — search those terms explicitly, don't wait to stumble on them.
 
 **The anti-copy contract:** distill each reference into ONE move (its concept sentence, its signature mechanic, or its type/motion attitude) and take **at most one move per reference**. A design assembled from one site is a copy; a design assembled from six moves across four sources is a point of view. Steal the level, not the layout — the concept still comes from YOUR brief via fable-design-dna. Use fable-design-research for sweep/curation mechanics. No web access this session? Say so and proceed from the formula below — never fake a reference you didn't see.
@@ -77,6 +79,7 @@ Why: the type *is* the concept, not a label for it; the off-grid treated image a
 
 Before calling it done, self-check against this skill's own non-negotiables, then hand to **fable-design-critique** for an independent pass:
 - [ ] Multi-source sweep done: 5–8 references, ≥3 sources, at most one move taken per reference (or sweep explicitly noted as unavailable).
+- [ ] **The side-by-side test:** your hero screenshot placed next to two swept winners. If yours is the one a juror would scroll past, return to COMMIT — never polish a generic concept.
 - [ ] Concept is legible in the first viewport in <1s — screenshot the hero and squint.
 - [ ] Exactly ONE signature interaction, not two or three.
 - [ ] Mobile carries the same concept (type still oversized, interactions touch-native) — not a stripped grid.

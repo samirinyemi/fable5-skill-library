@@ -29,7 +29,7 @@ If no visual MCP is present, use whatever else the session offers — web search
 |---|---|---|---|
 | **Pinterest** | https://www.pinterest.com/ | Broad aesthetic boards, any visual query | `https://www.pinterest.com/search/pins/?q=QUERY` · or web search `site:pinterest.com QUERY` |
 | **Cosmos** | https://www.cosmos.so/ | Curated taste-forward inspiration | `https://www.cosmos.so/search?q=QUERY` · often login-walled — use browser tools |
-| **Awwwards** | https://www.awwwards.com/ | Award-tier full sites & live interactions | `https://www.awwwards.com/websites/?text=QUERY` · category pages e.g. `/inspiration/scroll-animations` |
+| **Awwwards** | https://www.awwwards.com/ | Award-tier full sites & live interactions | `https://www.awwwards.com/websites/?text=QUERY` · category pages e.g. `/inspiration/scroll-animations` · **scripted, no browser needed:** `bash scripts/awwwards-live-urls.sh [limit] [query]` (in this skill's folder) returns `slug \| live-site-URL` pairs for current winners |
 | Mobbin | https://mobbin.com/ | Real product UI screens & flows | Browse by app / pattern; screenshot library |
 | Godly | https://godly.website/ | Modern web design, sortable by section | Filter by tag |
 | Land-book · SiteInspire | https://land-book.com/ · https://www.siteinspire.com/ | Landing pages & categorized sites | Filter by style/type |
