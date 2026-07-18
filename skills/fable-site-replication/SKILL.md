@@ -1,6 +1,6 @@
 ---
 name: fable-site-replication
-description: Use when asked to replicate/clone/rebuild an existing site or page 1:1 from a URL or screenshots ("make me this site", "copy this design", "rebuild this page") — measured, forensic fidelity. NOT for "in the style of" (use fable-style-extraction); use when a replica came out "similar but off" and must match exactly.
+description: Use when asked to replicate/clone/rebuild an existing site or page 1:1 from a URL or screenshots ("make me this site", "copy this design", "rebuild this page") — measured, forensic fidelity on ANY stack (Next.js, Webflow, Framer, WordPress, SPA, static). NOT for "in the style of" (use fable-style-extraction); use when a replica came out "similar but off" and must match exactly.
 requires: [fable-design-dna]
 pairs_with: [fable-style-extraction, fable-design-critique]
 ---
@@ -13,15 +13,21 @@ Replication is forensics, not inspiration. Models fail at 1:1 copies for one rea
 
 **The iron rule: never type a value you didn't measure.** No estimated hex, no "looks like 24px", no font guessed from vibes.
 
+**The stack-agnostic rule: replicate the rendered output, not the source code.** Computed styles and the post-load DOM look identical whether the site was built with Next.js, Webflow, Framer, WordPress, or raw HTML. You never need to understand their build — only what the browser actually painted.
+
 **Works with:** load `fable-style-extraction` INSTEAD if the user wants the reference's *look* applied to *different* content (not a 1:1 clone) — same forensic-capture method, different output mode. Use `fable-figma-craft` / browser tooling in Phase 1 to pull real DOM + computed styles. Replication reproduces *their* decisions, not new ones, so hold `fable-design-dna`'s generative heuristics — they fight 1:1 fidelity. Run `fable-design-critique` only AFTER parity, as a separate improvement pass (see Red Flags and Ship Gate).
+
+## Phase 0 — Fingerprint the Stack (30 seconds, decides the capture route)
+
+View source first. If the body is full HTML, `curl` works. If the body is a near-empty `<div id="root">`, the site is a client-rendered SPA and **fetching the HTML is blind — everything must go through a real browser.** Framework markers (`__NEXT_DATA__`, `data-wf-page`, `data-framer-*`, `wp-content/`…) and their capture routes: see [references/capture-playbook.md](references/capture-playbook.md) — load it for every replication job.
 
 ## Phase 1 — Capture Evidence (before writing ANY code)
 
 This capture procedure is shared with `fable-style-extraction` — one method, two output modes: a 1:1 clone (here) vs. the reference's look applied to new content (there). Capture identically; only what you do with the inventory differs.
 
 1. **Screenshot the original** at desktop (1440), tablet (768), and mobile (375) — full page, plus close-ups of the header, hero, and one content section. These are the ground truth for the diff loop.
-2. **Fetch the real DOM and CSS.** Use whatever the session offers: browser tools (navigate + read page + computed styles), WebFetch, or `curl` the HTML and its linked stylesheets. Save them — you will quote from them, not recall them.
-3. **Interact before transcribing:** note sticky behavior, hover states, scroll animations, menus, carousels. Static screenshots hide half the design.
+2. **Capture the RENDERED DOM and computed styles** — not just the raw stylesheets. Snapshot `document.documentElement.outerHTML` after full load (and again with menus/modals open); pull `getComputedStyle()` per text role and component. Utility-class and CSS-in-JS sites make raw CSS unreadable; computed styles are the framework-proof ground truth. Concrete recipes (style dump snippet, @font-face extraction, token dump, network asset harvest): [references/capture-playbook.md](references/capture-playbook.md).
+3. **Interact before transcribing:** note sticky behavior, hover states, scroll animations, menus, carousels. Static screenshots hide half the design. For JS-driven motion (minified bundles are unreadable), **measure the behavior, not the code** — trigger point, property animated, duration feel, stagger.
 
 ## Phase 2 — Token Inventory (the measured facts)
 
@@ -74,6 +80,10 @@ Screenshots capture the resting state only. Also capture and transcribe:
 - **Mid-animation:** scroll to trigger reveals and screenshot partway — easing and offsets live here
 - **Flows:** for multi-step behavior (checkout, onboarding), walk the flow and capture each step plus its transition; replicate the sequence, not just the screens
 
+## What Can Never Be 100% — Declare, Don't Hide
+
+Some things physically cannot be cloned: licensed fonts (substitute the closest metrics-compatible free face), auth-walled or server data (static fixtures shaped identically), proprietary WebGL/canvas shaders (visual recreation, labeled), backend behavior (simulate every visible state). **A "1:1" claim with silent substitutions is a failed replication** — list every substitution in the deliverable. Full table: [references/capture-playbook.md](references/capture-playbook.md).
+
 ## Scope & Ethics
 
 Replicating is legitimate for learning, prototyping, client-authorized rebuilds, and migrating one's own site. Don't clone a site to impersonate a brand or ship someone else's design as a client deliverable — logos, copy, and photography stay with their owners; swap them out for anything public-facing.
@@ -106,6 +116,8 @@ Why: every "close" value on the left reads as *off* stacked together — the dif
 
 Before calling it done, self-check against this skill's own non-negotiables, then hand to `fable-design-critique` for an independent pass:
 - [ ] Every CSS value traces to the Phase-2 token inventory — zero eyeballed hex, sizes, or fonts
+- [ ] Stack fingerprinted; SPA/CSR sites captured via rendered DOM, never raw HTML
 - [ ] 3+ diff passes logged at 1440 / 768 / 375, largest-discrepancy-first
 - [ ] Opened / hover / focus / scroll states transcribed, not just the resting screenshot
+- [ ] Every unavoidable substitution (fonts, data, shaders) declared in the deliverable
 - [ ] Stranger-flick test passes; no design "improvements" snuck in — those go to a separate post-parity critique pass

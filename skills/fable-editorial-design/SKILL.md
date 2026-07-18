@@ -2,7 +2,7 @@
 name: fable-editorial-design
 description: Use when designing reading-first editorial layouts — magazines, blogs, longform articles, news, digital publications — pacing text with grid, type voice, and planned interruptions; NOT for portfolio case-study narratives (use fable-portfolio-case-study) or the type system itself (fable-typography).
 requires: [fable-design-dna]
-pairs_with: [fable-typography, fable-image-direction, fable-design-critique]
+pairs_with: [fable-typography, fable-image-direction, fable-design-research, fable-design-critique]
 ---
 
 # Editorial Design
@@ -12,6 +12,15 @@ pairs_with: [fable-typography, fable-image-direction, fable-design-critique]
 Editorial design is pacing: the art of making someone *want* to keep reading. Fable's method borrows from print masters: **a real grid, a strong typographic voice, and planned interruptions that reset attention every few hundred words.**
 
 **REQUIRED BACKGROUND:** fable-design-dna. Pair with fable-typography for the type system itself, fable-image-direction for full-bleed/column/margin image sizing, and fable-color-craft for the accent/kicker color.
+
+## Reference Sweep (before layout, when web access exists)
+
+Editorial taste lives on curated boards — pull 3–5 print-grade references before committing to a grid:
+
+- **Cosmos:** `https://www.cosmos.so/search?q=editorial+layout` (login-walled — use browser tools; also try "magazine spread", "swiss typography")
+- **Pinterest:** `https://www.pinterest.com/search/pins/?q=editorial+design+layout` or web search `site:pinterest.com magazine grid design`
+
+Extract the *mechanic* from each pick — a pull-quote break, a margin-hung caption, a dropped-initial treatment, an asymmetric image pairing — never the artwork or the copy. Use fable-design-research for sweep/curation discipline. No web access? Proceed from the rules below; never cite a reference you didn't fetch.
 
 ## The Grid Is the Personality
 

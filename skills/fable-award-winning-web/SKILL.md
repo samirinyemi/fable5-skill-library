@@ -2,7 +2,7 @@
 name: fable-award-winning-web
 description: Use for prestige-tier, Awwwards/FWA-caliber web experiences — portfolio, product-launch, agency, or campaign sites — or when the user asks for "award-winning", "premium", "high-end", or "cinematic" web. Escalate here from fable-web-design when the job is a showpiece, not a conversion page.
 requires: [fable-design-dna]
-pairs_with: [fable-web-design, fable-signature-effects, fable-motion-design, fable-design-critique]
+pairs_with: [fable-web-design, fable-signature-effects, fable-motion-design, fable-design-research, fable-design-critique]
 ---
 
 # Award-Winning Web
@@ -14,6 +14,16 @@ Award-level sites win on three axes: **a singular concept, typography as the sta
 **REQUIRED BACKGROUND:** fable-design-dna (operating loop). This skill is the web-experience execution layer.
 **Chains with:** fable-signature-effects (build the one signature mechanic) · fable-motion-design + fable-animation-engineering (entrance/scroll choreography) · fable-typography (display-face selection) · fable-editorial-design (asymmetric grid breakouts).
 **Finish with:** fable-design-critique — REQUIRED before shipping.
+
+## Phase 0 — Study Current Winners (mandatory when web access exists)
+
+Award-level is a moving bar — calibrate against what is winning NOW, not remembered patterns. Before designing, pull 3–5 current Awwwards winners in the project's genre and visit the actual sites (thumbnails hide the motion):
+
+- Winners gallery, filterable by category/tag: `https://www.awwwards.com/websites/`
+- Sites of the Day: `https://www.awwwards.com/websites/sites_of_the_day/`
+- Themed collections: `https://www.awwwards.com/inspiration/` (search e.g. "scroll-animations", "typography")
+
+Distill each winner into three lines: its concept sentence, its ONE signature move, its type/motion attitude. **Steal the level, not the layout** (fable-style-extraction's rule) — the sweep sets the bar; the concept still comes from YOUR brief via fable-design-dna. Use fable-design-research for the sweep/curation mechanics. No web access this session? Say so and proceed from the formula below — never fake a reference you didn't see.
 
 ## The Award Formula
 
@@ -61,6 +71,7 @@ Why: the type *is* the concept, not a label for it; the off-grid treated image a
 ## Ship Gate
 
 Before calling it done, self-check against this skill's own non-negotiables, then hand to **fable-design-critique** for an independent pass:
+- [ ] Current-winner sweep done (or explicitly noted as unavailable) — the bar was calibrated, not remembered.
 - [ ] Concept is legible in the first viewport in <1s — screenshot the hero and squint.
 - [ ] Exactly ONE signature interaction, not two or three.
 - [ ] Mobile carries the same concept (type still oversized, interactions touch-native) — not a stripped grid.
